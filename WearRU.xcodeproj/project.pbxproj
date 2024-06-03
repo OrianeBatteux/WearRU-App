@@ -13,6 +13,7 @@
 		704E68042C0DC20D00000B89 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704E68032C0DC20D00000B89 /* DataModel.swift */; };
 		704E68072C0DC24400000B89 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704E68062C0DC24400000B89 /* MainView.swift */; };
 		704E680A2C0DC27300000B89 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704E68092C0DC27300000B89 /* DetailView.swift */; };
+		704E680F2C0DC4C200000B89 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704E680E2C0DC4C200000B89 /* Color+Extensions.swift */; };
 		709D6BF22C0DB49700F57235 /* WearRUApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D6BF12C0DB49700F57235 /* WearRUApp.swift */; };
 		709D6BF42C0DB49700F57235 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D6BF32C0DB49700F57235 /* ContentView.swift */; };
 		709D6BF62C0DB49700F57235 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D6BF52C0DB49700F57235 /* Item.swift */; };
@@ -27,6 +28,7 @@
 		704E68032C0DC20D00000B89 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		704E68062C0DC24400000B89 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		704E68092C0DC27300000B89 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		704E680E2C0DC4C200000B89 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		709D6BEE2C0DB49700F57235 /* WearRU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WearRU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		709D6BF12C0DB49700F57235 /* WearRUApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WearRUApp.swift; sourceTree = "<group>"; };
 		709D6BF32C0DB49700F57235 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		709D6C032C0DB74700F57235 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				704E680E2C0DC4C200000B89 /* Color+Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				704E68072C0DC24400000B89 /* MainView.swift in Sources */,
 				709D6BF42C0DB49700F57235 /* ContentView.swift in Sources */,
 				704E68002C0DC1D900000B89 /* DatabaseService.swift in Sources */,
+				704E680F2C0DC4C200000B89 /* Color+Extensions.swift in Sources */,
 				709D6BF62C0DB49700F57235 /* Item.swift in Sources */,
 				704E67FE2C0DC1CB00000B89 /* NetworkService.swift in Sources */,
 				709D6BF22C0DB49700F57235 /* WearRUApp.swift in Sources */,
