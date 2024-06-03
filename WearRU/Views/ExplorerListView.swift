@@ -9,7 +9,25 @@ import SwiftUI
 
 struct ExplorerListView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            ZStack {
+                Image("CardShop_1")
+                    .resizable()
+                    .frame(width: 350, height: 350)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+            }
+            HStack(alignment: .center) {
+                Text("Erica Zhou").bold()
+                    .font(.system(size: 30))
+                Spacer()
+                Text("Ouvert")
+                Circle()
+                    .frame(height: 20)
+                    .foregroundStyle(Color(.green))
+            }
+            .foregroundStyle(Color(.colorText))
+            .padding()
+        }
     }
 }
 
