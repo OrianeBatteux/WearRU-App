@@ -72,6 +72,29 @@
 			path = SubViews;
 			sourceTree = "<group>";
 		};
+		704E680B2C0DC2BB00000B89 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				704E680D2C0DC2E900000B89 /* CustomViews */,
+				704E680C2C0DC2E500000B89 /* UIComponents */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		704E680C2C0DC2E500000B89 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		704E680D2C0DC2E900000B89 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		709D6BE52C0DB49700F57235 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +118,7 @@
 				709D6BF32C0DB49700F57235 /* ContentView.swift */,
 				709D6BF52C0DB49700F57235 /* Item.swift */,
 				704E68052C0DC22A00000B89 /* Views */,
+				704E680B2C0DC2BB00000B89 /* Components */,
 				709D6C022C0DB73E00F57235 /* Models */,
 				709D6C012C0DB73200F57235 /* ViewModels */,
 				704E67FC2C0DC1AD00000B89 /* Services */,
