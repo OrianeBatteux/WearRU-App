@@ -1,0 +1,33 @@
+disabled_rules: # Liste des règles à désactiver
+  - colon
+  - force_unwrapping
+  - force_cast
+  - line_length
+
+opt_in_rules: # Liste des règles qui ne sont activées que si elles sont explicitement ajoutées
+  - empty_count
+  - explicit_init
+  - sorted_first_last
+
+included: # Liste des chemins de fichiers/dossiers à inclure dans le linting
+  - Sources/
+  - Tests/
+
+excluded: # Liste des chemins de fichiers/dossiers à exclure du linting
+  - Carthage/
+  - Pods/
+
+line_length: # Configuration de la longueur maximale des lignes
+  warning: 120 # Avertissement pour les lignes de plus de 120 caractères
+  error: 200 # Erreur pour les lignes de plus de 200 caractères
+
+file_length: # Configuration de la longueur maximale des fichiers
+  warning: 400 # Avertissement pour les fichiers de plus de 400 lignes
+  error: 1000 # Erreur pour les fichiers de plus de 1000 lignes
+
+custom_rules: # Liste des règles personnalisées
+  todo:
+    name: "TODOs and FIXMEs" # Nom de la règle
+    regex: '(TODO|FIXME)' # Expression régulière pour identifier les TODOs et FIXMEs
+    message: "Avoid using TODOs and FIXMEs" # Message affiché pour les violations
+    severity: warning # Sévérité de la violation (warning, error)
