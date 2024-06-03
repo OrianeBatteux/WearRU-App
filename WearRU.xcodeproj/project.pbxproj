@@ -97,6 +97,14 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		704E68102C0DC54800000B89 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				704E680E2C0DC4C200000B89 /* Color+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		709D6BE52C0DB49700F57235 = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +126,6 @@
 			children = (
 				709D6BF12C0DB49700F57235 /* WearRUApp.swift */,
 				709D6BF32C0DB49700F57235 /* ContentView.swift */,
-				709D6BF52C0DB49700F57235 /* Item.swift */,
 				704E68052C0DC22A00000B89 /* Views */,
 				704E680B2C0DC2BB00000B89 /* Components */,
 				709D6C022C0DB73E00F57235 /* Models */,
@@ -151,6 +158,7 @@
 		709D6C022C0DB73E00F57235 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				709D6BF52C0DB49700F57235 /* Item.swift */,
 				704E68032C0DC20D00000B89 /* DataModel.swift */,
 			);
 			path = Models;
@@ -159,7 +167,7 @@
 		709D6C032C0DB74700F57235 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				704E680E2C0DC4C200000B89 /* Color+Extensions.swift */,
+				704E68102C0DC54800000B89 /* Extensions */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
