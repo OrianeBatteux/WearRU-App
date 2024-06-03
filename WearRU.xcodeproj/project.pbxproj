@@ -56,6 +56,10 @@
 				709D6BF12C0DB49700F57235 /* WearRUApp.swift */,
 				709D6BF32C0DB49700F57235 /* ContentView.swift */,
 				709D6BF52C0DB49700F57235 /* Item.swift */,
+				709D6C012C0DB73200F57235 /* Views */,
+				709D6C022C0DB73E00F57235 /* Models */,
+				709D6C032C0DB74700F57235 /* Tools */,
+				709D6C042C0DB75E00F57235 /* Controllers */,
 				709D6BF72C0DB49700F57235 /* Assets.xcassets */,
 				709D6BF92C0DB49700F57235 /* Preview Content */,
 			);
@@ -68,6 +72,34 @@
 				709D6BFA2C0DB49700F57235 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		709D6C012C0DB73200F57235 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		709D6C022C0DB73E00F57235 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		709D6C032C0DB74700F57235 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		709D6C042C0DB75E00F57235 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
