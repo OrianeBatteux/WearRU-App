@@ -17,22 +17,26 @@ struct ExplorerListView: View {
             }
             List {
                 ForEach(viewModel.shops) { shop in
-                    VStack(alignment: .leading) {
+                    VStack(alignment: .leading, spacing: 16.0) {
+                        Image(shop.shopImage)
+                            .resizable()
+                            .frame(width: 350, height: 350)
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                        HStack {
                         Text(shop.shopName)
-                            .font(.headline)
-                        
-                        // Afficher shopOpening selon la valeur de isOpen
-                        Text(shop.shopOpening ? "Ouvert" : "Fermé")
-                            .foregroundColor(shop.shopOpening ? .green : .red)
-                        
-                        Text("Opening Hours: \(shop.shopHours)")
-                        Text("Location: \(shop.shopLocation.lat), \(shop.shopLocation.long)")
-                    }
-                }
-                .onDelete { indexSet in
-                    indexSet.forEach { index in
-                        viewModel.removeShop(at: index)
-                    }
+                            .font(.title).bold()
+                            .foregroundStyle(.colorText)
+                            Spacer()
+                            Text(shop.shopOpening ? "Ouvert" : "Fermé")
+                            Circle()
+                                .frame(height: 20)
+                                .foregroundStyle(shop.shopOpening ? .green : .red)
+                        }
+                        Text("\(Image(systemName: "clock.circle.fill")) \(shop.shopHours)")
+                        Text("\(Image(systemName:"mappin.circle.fill")) \(shop.shopLocation.address)")
+                        Text("\(Image(systemName: "phone.circle.fill"))\(shop.shopPhone)")
+                            .font(.title2)
+                    }.padding()
                 }
             }
         }

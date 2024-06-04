@@ -21,4 +21,5 @@ struct Location: Identifiable {
     let id : UUID = UUID()
     var lat: Double
     var long: Double
+    var address: String
     }
