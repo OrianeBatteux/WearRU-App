@@ -16,24 +16,20 @@ struct CardShop: View {
     var phone: String
     var hours: String
     
-    
     var body: some View {
-        VStack {
-            ZStack {
-                Image(image)
-                    .resizable()
-                    .frame(width: 350, height: 350)
-                    .clipShape(RoundedRectangle(cornerRadius: 20))
-            }
+        VStack(spacing: 16.0) {
+            Image(image)
+                .resizable()
+                .frame(width: 350, height: 350)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
             HStack(alignment: .center) {
                 Text(title).bold()
                     .font(.system(size: 30))
                 Spacer()
-                OpeningButtonView(overture: true)
+                OpeningButton(overture: true)
             }
             .foregroundStyle(.colorText).bold()
-            .padding()
-            HStack {
+            HStack(alignment: .center) {
                 Image(systemName: "mappin.circle.fill")
                     .foregroundStyle(Color(.colorPrimary))
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
@@ -46,27 +42,23 @@ struct CardShop: View {
                 Text(phone)
                     .foregroundStyle(.colorText).bold()
             }
-
-            VStack {
-                HStack {
-                    Image(systemName: "clock.circle.fill").bold()
-                        .foregroundStyle(Color(.colorPrimary))
-                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                    Text(hours)
-                        .foregroundStyle(.colorText).bold()
-                    Spacer()
-                    Image(systemName: "map.circle.fill")
-                        .foregroundStyle(Color(.colorPrimary))
-                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                    ItineraryButton()
-                        .foregroundStyle(.colorText).bold()
-                }
+            HStack(alignment: .center) {
+                Image(systemName: "clock.circle.fill").bold()
+                    .foregroundStyle(Color(.colorPrimary))
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                Text(hours)
+                    .foregroundStyle(.colorText).bold()
+                Spacer()
+                Image(systemName: "map.circle.fill")
+                    .foregroundStyle(Color(.colorPrimary))
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                ItineraryButton()
+                    .foregroundStyle(.colorText).bold()
             }
-            Spacer()
         }
-        .padding()
+        .padding(.horizontal)
     }
-}
+    }
 
 #Preview {
     CardShop(image: "Test", title: "Test", location: "Test", phone: "Test", hours: "Test")

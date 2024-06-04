@@ -1,18 +1,18 @@
 //
-//  MainViewModel.swift
+//  FilterView.swift
 //  WearRU
 //
-//  Created by Apprenant 154 on 03/06/2024.
+//  Created by Apprenant 154 on 04/06/2024.
 //
 
 import SwiftUI
 
-struct MainViewModel: View {
+struct FilterView: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    MainViewModel()
+    FilterView()
 }

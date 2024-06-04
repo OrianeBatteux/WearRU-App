@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct OpeningButtonView: View {
+struct OpeningButton: View {
     
     var overture: Bool
     var body: some View {
@@ -30,5 +30,5 @@ struct OpeningButtonView: View {
 }
 
 #Preview {
-    OpeningButtonView(overture: false)
+    OpeningButton(overture: false)
 }

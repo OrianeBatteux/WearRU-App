@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct ButtonSwitchView: View {
+struct ButtonSwitch: View {
     let icon: String?
     let label: String
     let action: () -> Void
@@ -50,5 +50,5 @@ struct ButtonSwitchView: View {
     }
 }
 #Preview {
-    ButtonSwitchView(label: "Button") {}
+    ButtonSwitch(label: "Button") {}
 }

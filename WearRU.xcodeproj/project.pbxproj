@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		704E67FE2C0DC1CB00000B89 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704E67FD2C0DC1CB00000B89 /* NetworkService.swift */; };
 		704E68002C0DC1D900000B89 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704E67FF2C0DC1D900000B89 /* DatabaseService.swift */; };
-		704E68022C0DC1F900000B89 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704E68012C0DC1F900000B89 /* MainViewModel.swift */; };
+		704E68022C0DC1F900000B89 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704E68012C0DC1F900000B89 /* FilterViewModel.swift */; };
 		704E68042C0DC20D00000B89 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704E68032C0DC20D00000B89 /* DataModel.swift */; };
 		704E68072C0DC24400000B89 /* ExplorerMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704E68062C0DC24400000B89 /* ExplorerMapView.swift */; };
 		704E680A2C0DC27300000B89 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704E68092C0DC27300000B89 /* DetailView.swift */; };
@@ -17,12 +17,13 @@
 		704E68122C0DC70800000B89 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704E68112C0DC70800000B89 /* User.swift */; };
 		704E68142C0DC72B00000B89 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704E68132C0DC72B00000B89 /* Category.swift */; };
 		704E68162C0DC73800000B89 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704E68152C0DC73800000B89 /* Task.swift */; };
-		707E3BAE2C0DEDE2003E8724 /* ButtonSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E3BAD2C0DEDE2003E8724 /* ButtonSwitchView.swift */; };
+		707E3BAE2C0DEDE2003E8724 /* ButtonSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E3BAD2C0DEDE2003E8724 /* ButtonSwitch.swift */; };
 		707E3BB02C0DEDEC003E8724 /* CardShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E3BAF2C0DEDEC003E8724 /* CardShop.swift */; };
 		707E3BB22C0DEDFD003E8724 /* File3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E3BB12C0DEDFD003E8724 /* File3.swift */; };
 		707E3BB42C0F0717003E8724 /* ButtonFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E3BB32C0F0717003E8724 /* ButtonFilter.swift */; };
-		707E3BB62C0F11DB003E8724 /* OpeningButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E3BB52C0F11DB003E8724 /* OpeningButtonView.swift */; };
+		707E3BB62C0F11DB003E8724 /* OpeningButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E3BB52C0F11DB003E8724 /* OpeningButton.swift */; };
 		707E3BB92C0F2087003E8724 /* ItineraryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E3BB82C0F2087003E8724 /* ItineraryButton.swift */; };
+		707E3BBB2C0F3A95003E8724 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E3BBA2C0F3A95003E8724 /* FilterView.swift */; };
 		709D6BF22C0DB49700F57235 /* WearRUApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D6BF12C0DB49700F57235 /* WearRUApp.swift */; };
 		709D6BF42C0DB49700F57235 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D6BF32C0DB49700F57235 /* ContentView.swift */; };
 		709D6BF62C0DB49700F57235 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D6BF52C0DB49700F57235 /* Item.swift */; };
@@ -45,7 +46,7 @@
 /* Begin PBXFileReference section */
 		704E67FD2C0DC1CB00000B89 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		704E67FF2C0DC1D900000B89 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
-		704E68012C0DC1F900000B89 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		704E68012C0DC1F900000B89 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		704E68032C0DC20D00000B89 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		704E68062C0DC24400000B89 /* ExplorerMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerMapView.swift; sourceTree = "<group>"; };
 		704E68092C0DC27300000B89 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
@@ -53,13 +54,14 @@
 		704E68112C0DC70800000B89 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		704E68132C0DC72B00000B89 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		704E68152C0DC73800000B89 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		707E3BAD2C0DEDE2003E8724 /* ButtonSwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSwitchView.swift; sourceTree = "<group>"; };
+		707E3BAD2C0DEDE2003E8724 /* ButtonSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSwitch.swift; sourceTree = "<group>"; };
 		707E3BAF2C0DEDEC003E8724 /* CardShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardShop.swift; sourceTree = "<group>"; };
 		707E3BB12C0DEDFD003E8724 /* File3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File3.swift; sourceTree = "<group>"; };
 		707E3BB32C0F0717003E8724 /* ButtonFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFilter.swift; sourceTree = "<group>"; };
-		707E3BB52C0F11DB003E8724 /* OpeningButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningButtonView.swift; sourceTree = "<group>"; };
+		707E3BB52C0F11DB003E8724 /* OpeningButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningButton.swift; sourceTree = "<group>"; };
 		707E3BB72C0F200F003E8724 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		707E3BB82C0F2087003E8724 /* ItineraryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryButton.swift; sourceTree = "<group>"; };
+		707E3BBA2C0F3A95003E8724 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		709D6BEE2C0DB49700F57235 /* WearRU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WearRU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		709D6BF12C0DB49700F57235 /* WearRUApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WearRUApp.swift; sourceTree = "<group>"; };
 		709D6BF32C0DB49700F57235 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -141,10 +143,10 @@
 		704E680C2C0DC2E500000B89 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
-				707E3BAD2C0DEDE2003E8724 /* ButtonSwitchView.swift */,
+				707E3BAD2C0DEDE2003E8724 /* ButtonSwitch.swift */,
 				707E3BB32C0F0717003E8724 /* ButtonFilter.swift */,
 				707E3BB82C0F2087003E8724 /* ItineraryButton.swift */,
-				707E3BB52C0F11DB003E8724 /* OpeningButtonView.swift */,
+				707E3BB52C0F11DB003E8724 /* OpeningButton.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				707E3BAF2C0DEDEC003E8724 /* CardShop.swift */,
+				707E3BBA2C0F3A95003E8724 /* FilterView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -211,7 +214,7 @@
 		709D6C012C0DB73200F57235 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				704E68012C0DC1F900000B89 /* MainViewModel.swift */,
+				704E68012C0DC1F900000B89 /* FilterViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -339,7 +342,7 @@
 				E2A00A632C0E0B7600D603FD /* ResearchBarExView.swift in Sources */,
 				704E68042C0DC20D00000B89 /* DataModel.swift in Sources */,
 				E2A00A672C0E0CC700D603FD /* SwitchMapListButtonExView.swift in Sources */,
-				707E3BB62C0F11DB003E8724 /* OpeningButtonView.swift in Sources */,
+				707E3BB62C0F11DB003E8724 /* OpeningButton.swift in Sources */,
 				704E680A2C0DC27300000B89 /* DetailView.swift in Sources */,
 				EAB087812C0DF16B00A7C28C /* SplashView.swift in Sources */,
 				EAB0877F2C0DF15800A7C28C /* ShareModalView.swift in Sources */,
@@ -348,19 +351,20 @@
 				709D6BF42C0DB49700F57235 /* ContentView.swift in Sources */,
 				704E68002C0DC1D900000B89 /* DatabaseService.swift in Sources */,
 				707E3BB22C0DEDFD003E8724 /* File3.swift in Sources */,
+				707E3BBB2C0F3A95003E8724 /* FilterView.swift in Sources */,
 				704E680F2C0DC4C200000B89 /* Color+Extensions.swift in Sources */,
 				EAB0877D2C0DF14000A7C28C /* ExplorerSearchModalView.swift in Sources */,
 				709D6BF62C0DB49700F57235 /* Item.swift in Sources */,
 				704E67FE2C0DC1CB00000B89 /* NetworkService.swift in Sources */,
 				704E68162C0DC73800000B89 /* Task.swift in Sources */,
-				707E3BAE2C0DEDE2003E8724 /* ButtonSwitchView.swift in Sources */,
+				707E3BAE2C0DEDE2003E8724 /* ButtonSwitch.swift in Sources */,
 				EAB087772C0DF0F300A7C28C /* NewsSearchModalView.swift in Sources */,
 				EAB087752C0DF0C500A7C28C /* NewsArticleView.swift in Sources */,
 				707E3BB02C0DEDEC003E8724 /* CardShop.swift in Sources */,
 				EAB087792C0DF11000A7C28C /* ExplorerShopModalView.swift in Sources */,
 				709D6BF22C0DB49700F57235 /* WearRUApp.swift in Sources */,
 				707E3BB42C0F0717003E8724 /* ButtonFilter.swift in Sources */,
-				704E68022C0DC1F900000B89 /* MainViewModel.swift in Sources */,
+				704E68022C0DC1F900000B89 /* FilterViewModel.swift in Sources */,
 				E2A00A652C0E0C7E00D603FD /* FilterButtonExView.swift in Sources */,
 				704E68122C0DC70800000B89 /* User.swift in Sources */,
 				EAB087712C0DF05C00A7C28C /* ExplorerListView.swift in Sources */,

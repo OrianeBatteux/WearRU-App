@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct buttonFilter: View {
+    @State var isFilterTapped = false
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button("Grandes Tailles") {
+            isFilterTapped.toggle()
+        }
+        .padding()
+        .foregroundStyle(.white).bold()
+        .background(.colorPrimary)
+        .clipShape(RoundedRectangle(cornerRadius: 20))
     }
 }
 
