@@ -29,7 +29,7 @@ struct CardShop: View {
                 Text(title).bold()
                     .font(.system(size: 30))
                 Spacer()
-                Open_ClosedButtonView(overture: true)
+                OpeningButtonView(overture: true)
             }
             .foregroundStyle(.colorText).bold()
             .padding()
