@@ -40,7 +40,7 @@ struct SplashView: View {
     }
     func loadingCircleSplashView() {
         isLoading = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             isLoading = false
         }
     }
