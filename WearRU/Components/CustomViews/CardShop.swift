@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct CardShop: View {
+    
     var image: String
     var title: String
     var location: String
@@ -19,7 +20,7 @@ struct CardShop: View {
     var body: some View {
         VStack {
             ZStack {
-                Image(systemName: image)
+                Image(image)
                     .resizable()
                     .frame(width: 350, height: 350)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
