@@ -22,7 +22,6 @@ struct ButtonSwitchView: View {
         self.icon = icon
         self.action = action
     }
-    
     var body: some View {
         Button {
             action()
@@ -50,7 +49,6 @@ struct ButtonSwitchView: View {
         }
     }
 }
-
 #Preview {
     ButtonSwitchView(label: "Button") {}
 }
