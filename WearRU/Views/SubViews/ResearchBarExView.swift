@@ -8,19 +8,25 @@
 import SwiftUI
 
 struct ResearchBarExView: View {
+    @State private var researchText : String = ""
+    
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 10)
-                .stroke(.purple, lineWidth: 4)
+                .stroke(.colorPrimary, lineWidth: 6)
                 .fill(.white)
                 .frame(width : 280, height : 36)
             
             HStack {
-                Text("Recherche")
+            TextField("Recherche" ,text: $researchText)
                 Spacer()
-                Image(systemName: "mic.fill")
+                Button(action: {
+                    
+                }, label: {
+                    Image(systemName: "mic.fill")
+                })
             }
-            .foregroundColor(.gray)
+            .foregroundColor(.colorText)
             .font(.system(size: 20))
             .frame(width : 260)
         }
