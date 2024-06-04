@@ -8,27 +8,28 @@
 import SwiftUI
 
 struct OpeningButton: View {
-    
-    var overture: Bool
+    @StateObject var viewModel = ShopViewModel()
     var body: some View {
         HStack {
-            if overture {
-                Text("Ouvert")
-                    .foregroundStyle(.colorText).bold()
-                Circle()
-                    .frame(height: 20)
-                    .foregroundStyle(.green)
-            } else {
-                Text("Fermé")
-                    .foregroundStyle(.colorText).bold()
-                Circle()
-                    .frame(height: 20)
-                    .foregroundStyle(.red)
+            ForEach(viewModel.shops) { shop in
+                if shop.shopOpening {
+                    Text("Ouvert")
+                        .foregroundStyle(.colorText).bold()
+                    Circle()
+                        .frame(height: 20)
+                        .foregroundStyle(.green)
+                } else {
+                    Text("Fermé")
+                        .foregroundStyle(.colorText).bold()
+                    Circle()
+                        .frame(height: 20)
+                        .foregroundStyle(.red)
+                }
             }
         }
     }
 }
 
 #Preview {
-    OpeningButton(overture: false)
+    OpeningButton()
 }

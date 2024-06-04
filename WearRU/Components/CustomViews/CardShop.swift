@@ -10,6 +10,8 @@ import SwiftUI
 
 struct CardShop: View {
     
+    @StateObject var viewModel = ShopViewModel()
+    
     var image: String
     var title: String
     var location: String
@@ -17,50 +19,52 @@ struct CardShop: View {
     var hours: String
     
     var body: some View {
-        VStack(spacing: 16.0) {
-            ZStack {
-                Image(systemName: "heart.circle.fill")
-                    .foregroundStyle(.red)
-                Image(image)
-                    .resizable()
-                    .frame(width: 350, height: 350)
-                    .clipShape(RoundedRectangle(cornerRadius: 20))
+        ForEach(viewModel.shops) { shop in
+            VStack(spacing: 16.0) {
+                ZStack {
+                    Image(systemName: "heart.circle.fill")
+                        .foregroundStyle(.red)
+                    Image(shop.shopImage)
+                        .resizable()
+                        .frame(width: 350, height: 350)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                }
+                HStack(alignment: .center) {
+                    Text(shop.shopName).bold()
+                        .font(.system(size: 30))
+                    Spacer()
+                    OpeningButton()
+                }
+                .foregroundStyle(.colorText).bold()
+                HStack(alignment: .center) {
+                    Image(systemName: "mappin.circle.fill")
+                        .foregroundStyle(Color(.colorPrimary))
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    Text(location)
+                        .foregroundStyle(.colorText).bold()
+                    Spacer()
+                    Image(systemName: "phone.circle.fill")
+                        .foregroundStyle(Color(.colorPrimary))
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    Text(shop.shopPhone)
+                        .foregroundStyle(.colorText).bold()
+                }
+                HStack(alignment: .center) {
+                    Image(systemName: "clock.circle.fill").bold()
+                        .foregroundStyle(Color(.colorPrimary))
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    Text(shop.shopHours)
+                        .foregroundStyle(.colorText).bold()
+                    Spacer()
+                    Image(systemName: "map.circle.fill")
+                        .foregroundStyle(Color(.colorPrimary))
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    ItineraryButton()
+                        .foregroundStyle(.colorText).bold()
+                }
             }
-            HStack(alignment: .center) {
-                Text(title).bold()
-                    .font(.system(size: 30))
-                Spacer()
-                OpeningButton(overture: true)
-            }
-            .foregroundStyle(.colorText).bold()
-            HStack(alignment: .center) {
-                Image(systemName: "mappin.circle.fill")
-                    .foregroundStyle(Color(.colorPrimary))
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                Text(location)
-                    .foregroundStyle(.colorText).bold()
-                Spacer()
-                Image(systemName: "phone.circle.fill")
-                    .foregroundStyle(Color(.colorPrimary))
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                Text(phone)
-                    .foregroundStyle(.colorText).bold()
-            }
-            HStack(alignment: .center) {
-                Image(systemName: "clock.circle.fill").bold()
-                    .foregroundStyle(Color(.colorPrimary))
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                Text(hours)
-                    .foregroundStyle(.colorText).bold()
-                Spacer()
-                Image(systemName: "map.circle.fill")
-                    .foregroundStyle(Color(.colorPrimary))
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                ItineraryButton()
-                    .foregroundStyle(.colorText).bold()
-            }
+            .padding(.horizontal)
         }
-        .padding(.horizontal)
     }
 }
 
