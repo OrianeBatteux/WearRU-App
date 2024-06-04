@@ -28,37 +28,37 @@ struct CardShop: View {
                 Text(title).bold()
                     .font(.system(size: 30))
                 Spacer()
-                Text("Ouvert")
-                Circle()
-                    .frame(height: 20)
-                    .foregroundStyle(Color(.green))
+                Open_ClosedButtonView(overture: true)
             }
-            .foregroundStyle(.colorText)
+            .foregroundStyle(.colorText).bold()
             .padding()
             HStack {
                 Image(systemName: "mappin.circle.fill")
                     .foregroundStyle(Color(.colorPrimary))
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                 Text(location)
-                    .foregroundStyle(.colorText)
+                    .foregroundStyle(.colorText).bold()
+                Spacer()
                 Image(systemName: "phone.circle.fill")
                     .foregroundStyle(Color(.colorPrimary))
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                 Text(phone)
-                    .foregroundStyle(.colorText)
+                    .foregroundStyle(.colorText).bold()
             }
+
             VStack {
                 HStack {
-                    Image(systemName: "clock.circle.fill")
+                    Image(systemName: "clock.circle.fill").bold()
                         .foregroundStyle(Color(.colorPrimary))
                         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     Text(hours)
-                        .foregroundStyle(.colorText)
+                        .foregroundStyle(.colorText).bold()
                     Image(systemName: "map.circle.fill")
                         .foregroundStyle(Color(.colorPrimary))
                         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    Spacer()
                     Text("Itinéraire")
-                        .foregroundStyle(.colorText)
+                        .foregroundStyle(.colorText).bold()
                     Image(systemName: "arrowshape.forward.circle")
                         .foregroundStyle(Color(.colorPrimary))
                         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
@@ -66,10 +66,11 @@ struct CardShop: View {
             }
             Spacer()
         }
+        .padding()
     }
 }
 
 #Preview {
-    CardShop(image: "", title: "", location: "", phone: "", hours: "")
+    CardShop(image: "Test", title: "Test", location: "Test", phone: "Test", hours: "Test")
 }
 
