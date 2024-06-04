@@ -25,7 +25,7 @@ struct ButtonSwitch: View {
     var body: some View {
         Button {
             action()
-            print("Switch on Map View")
+            //action
         } label: {
             HStack(spacing: 8) {
                 Text(label)

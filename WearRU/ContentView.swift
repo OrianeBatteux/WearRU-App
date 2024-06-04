@@ -12,7 +12,7 @@ struct ContentView: View {
     var body: some View {
         TabView {
             NavigationStack {
-                ExplorerListView()
+                ExplorerMapView()
             }
             .tabItem {
                 Text("Explorer")
