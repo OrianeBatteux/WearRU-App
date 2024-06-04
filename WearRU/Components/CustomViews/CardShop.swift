@@ -57,15 +57,12 @@ struct CardShop: View {
                 ItineraryButton()
                     .foregroundStyle(.colorText).bold()
             }
-            HStack {
-                buttonFilter()
-            }
         }
         .padding(.horizontal)
     }
 }
 
 #Preview {
-    CardShop(image: "Test", title: "Test", location: "Test", phone: "Test", hours: "Test")
+    CardShop(image: "CardShop_1", title: "Test", location: "Test", phone: "Test", hours: "Test")
 }
 
