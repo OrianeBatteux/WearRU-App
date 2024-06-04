@@ -60,6 +60,7 @@ struct ExplorerListView: View {
                     .padding()
                 }
             }
+            .background(.colorBackgroundLight)
             .scrollContentBackground(.hidden)
         }
     }

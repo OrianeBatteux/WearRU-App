@@ -18,7 +18,6 @@
 		704E68142C0DC72B00000B89 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704E68132C0DC72B00000B89 /* Category.swift */; };
 		704E68162C0DC73800000B89 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704E68152C0DC73800000B89 /* Task.swift */; };
 		707E3BAE2C0DEDE2003E8724 /* ButtonSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E3BAD2C0DEDE2003E8724 /* ButtonSwitch.swift */; };
-		707E3BB02C0DEDEC003E8724 /* CardShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E3BAF2C0DEDEC003E8724 /* CardShop.swift */; };
 		707E3BB22C0DEDFD003E8724 /* File3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E3BB12C0DEDFD003E8724 /* File3.swift */; };
 		707E3BB42C0F0717003E8724 /* ButtonFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E3BB32C0F0717003E8724 /* ButtonFilter.swift */; };
 		707E3BB62C0F11DB003E8724 /* OpeningButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E3BB52C0F11DB003E8724 /* OpeningButton.swift */; };
@@ -57,7 +56,6 @@
 		704E68132C0DC72B00000B89 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		704E68152C0DC73800000B89 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		707E3BAD2C0DEDE2003E8724 /* ButtonSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSwitch.swift; sourceTree = "<group>"; };
-		707E3BAF2C0DEDEC003E8724 /* CardShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardShop.swift; sourceTree = "<group>"; };
 		707E3BB12C0DEDFD003E8724 /* File3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File3.swift; sourceTree = "<group>"; };
 		707E3BB32C0F0717003E8724 /* ButtonFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFilter.swift; sourceTree = "<group>"; };
 		707E3BB52C0F11DB003E8724 /* OpeningButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningButton.swift; sourceTree = "<group>"; };
@@ -158,7 +156,6 @@
 		704E680D2C0DC2E900000B89 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				707E3BAF2C0DEDEC003E8724 /* CardShop.swift */,
 				707E3BBA2C0F3A95003E8724 /* FilterView.swift */,
 			);
 			path = CustomViews;
@@ -367,7 +364,6 @@
 				EAB087772C0DF0F300A7C28C /* NewsSearchModalView.swift in Sources */,
 				707E3BBD2C0F4ACD003E8724 /* ShopViewModel.swift in Sources */,
 				EAB087752C0DF0C500A7C28C /* NewsArticleView.swift in Sources */,
-				707E3BB02C0DEDEC003E8724 /* CardShop.swift in Sources */,
 				EAB087792C0DF11000A7C28C /* ExplorerShopModalView.swift in Sources */,
 				709D6BF22C0DB49700F57235 /* WearRUApp.swift in Sources */,
 				707E3BB42C0F0717003E8724 /* ButtonFilter.swift in Sources */,
