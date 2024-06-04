@@ -8,7 +8,7 @@
 import Foundation
 
 struct FilterModel: Identifiable {
-    var id = UUID()
+    var id: Int
     var name: String
     var isSelected: Bool = false
 }
