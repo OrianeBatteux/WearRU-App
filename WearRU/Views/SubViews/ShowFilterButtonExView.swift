@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ShowFilterButtonExView: View {
+    @State private var isVisible : Bool = false
     var body: some View {
         Button(action: {
-            
+            isVisible.toggle()
         }, label : {
             ZStack {
                 Circle()
