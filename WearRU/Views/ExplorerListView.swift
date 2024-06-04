@@ -10,64 +10,64 @@ import SwiftUI
 struct ExplorerListView: View {
     @StateObject var viewModel = ShopViewModel()
     var body: some View {
-        NavigationStack {
-            HStack {
-                ResearchBarExView()
-                FilterButtonExView()
-            }
-            List {
-                ForEach(viewModel.shops) { shop in
-                    VStack(alignment: .leading, spacing: 16.0) {
-                        Image(shop.shopImage)
-                            .resizable()
-                            .frame(width: 350, height: 350)
-                            .clipShape(RoundedRectangle(cornerRadius: 20))
-                        HStack(alignment: .center) {
-                            Text(shop.shopName)
-                                .font(.system(size: 32)).bold()
-                                .foregroundStyle(.colorText)
-                            Spacer()
-                            Text(shop.shopOpening ? "Ouvert" : "Fermé")
-                                .foregroundStyle(.colorText).bold()
-                            Circle()
-                                .frame(height: 20)
-                                .foregroundStyle(shop.shopOpening ? .green : .red)
-                        }
-                        HStack {
-                            Image(systemName: "mappin.circle.fill")
-                                .foregroundStyle(.colorPrimary)
-                                .font(.title)
-                            Text(shop.shopLocation.address)
-                                .font(.title2)
-                        }
-                        .foregroundStyle(.colorText)
-                        HStack {
-                            Image(systemName: "clock.circle.fill")
-                                .foregroundStyle(.colorPrimary)
-                                .font(.title)
-                            Text(shop.shopHours)
-                                .font(.title2)
-                        }
-                        .foregroundStyle(.colorText)
-                        HStack {
-                            Image(systemName: "phone.circle.fill")
-                                .foregroundStyle(.colorPrimary)
-                                .font(.title)
-                            Text(shop.shopPhone)
-                                .font(.title2)
-                        }
-                        .foregroundStyle(.colorText)
-                    }
-                    .padding()
+            NavigationStack {
+                HStack {
+                    ResearchBarExView()
+                    FilterButtonExView()
                 }
-            }
-            .scrollContentBackground(.hidden)
-            ButtonSwitch(label: "Maps", icon: "map.circle.fill"){
-                //action
+                List {
+                    ForEach(viewModel.shops) { shop in
+                        VStack(alignment: .leading, spacing: 16.0) {
+                            Image(shop.shopImage)
+                                .resizable()
+                                .frame(width: 350, height: 350)
+                                .clipShape(RoundedRectangle(cornerRadius: 20))
+                            HStack(alignment: .center) {
+                                Text(shop.shopName)
+                                    .font(.system(size: 32)).bold()
+                                    .foregroundStyle(.colorText)
+                                Spacer()
+                                Text(shop.shopOpening ? "Ouvert" : "Fermé")
+                                    .foregroundStyle(.colorText).bold()
+                                Circle()
+                                    .frame(height: 20)
+                                    .foregroundStyle(shop.shopOpening ? .green : .red)
+                            }
+                            HStack {
+                                Image(systemName: "mappin.circle.fill")
+                                    .foregroundStyle(.colorPrimary)
+                                    .font(.title)
+                                Text(shop.shopLocation.address)
+                                    .font(.title2)
+                            }
+                            .foregroundStyle(.colorText)
+                            HStack {
+                                Image(systemName: "clock.circle.fill")
+                                    .foregroundStyle(.colorPrimary)
+                                    .font(.title)
+                                Text(shop.shopHours)
+                                    .font(.title2)
+                            }
+                            .foregroundStyle(.colorText)
+                            HStack {
+                                Image(systemName: "phone.circle.fill")
+                                    .foregroundStyle(.colorPrimary)
+                                    .font(.title)
+                                Text(shop.shopPhone)
+                                    .font(.title2)
+                            }
+                            .foregroundStyle(.colorText)
+                        }
+                        .padding()
+                    }
+                }
+                .scrollContentBackground(.hidden)
+                ButtonSwitch(label: "Maps", icon: "map.circle.fill"){
+                    //action
+                }
             }
         }
     }
-}
 
 #Preview {
     ExplorerListView()
