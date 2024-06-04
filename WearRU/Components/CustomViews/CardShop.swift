@@ -54,15 +54,12 @@ struct CardShop: View {
                         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     Text(hours)
                         .foregroundStyle(.colorText).bold()
+                    Spacer()
                     Image(systemName: "map.circle.fill")
                         .foregroundStyle(Color(.colorPrimary))
                         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                    Spacer()
-                    Text("Itinéraire")
+                    ItineraryButton()
                         .foregroundStyle(.colorText).bold()
-                    Image(systemName: "arrowshape.forward.circle")
-                        .foregroundStyle(Color(.colorPrimary))
-                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                 }
             }
             Spacer()
