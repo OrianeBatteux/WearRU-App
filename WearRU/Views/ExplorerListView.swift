@@ -13,7 +13,7 @@ struct ExplorerListView: View {
             NavigationStack {
                 HStack {
                     ResearchBarExView()
-                    FilterButtonExView()
+                    ShowFilterButtonExView()
                 }
                 List {
                     ForEach(viewModel.shops) { shop in

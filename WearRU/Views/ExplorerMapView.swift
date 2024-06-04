@@ -16,7 +16,7 @@ struct ExplorerMapView: View {
                 HStack {
                    ResearchBarExView()
                     Spacer()
-                    FilterButtonExView()
+                    ShowFilterButtonExView()
                 }
                 Spacer()
                 SwitchMapListButtonExView()

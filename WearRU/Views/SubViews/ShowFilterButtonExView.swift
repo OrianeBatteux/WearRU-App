@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FilterButtonExView: View {
+struct ShowFilterButtonExView: View {
     var body: some View {
         Button(action: {
             
@@ -24,5 +24,5 @@ struct FilterButtonExView: View {
 }
 
 #Preview {
-    FilterButtonExView()
+    ShowFilterButtonExView()
 }
