@@ -24,7 +24,7 @@ struct ExplorerListView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 20))
                         HStack {
                             Text(shop.shopName)
-                                .font(.title).bold()
+                                .font(.system(size: 32)).bold()
                                 .foregroundStyle(.colorText)
                             Spacer()
                             Text(shop.shopOpening ? "Ouvert" : "Fermé")
@@ -33,19 +33,21 @@ struct ExplorerListView: View {
                                 .foregroundStyle(shop.shopOpening ? .green : .red)
                         }
                         HStack {
-                            Image(systemName: "clock.circle.fill")
-                                .foregroundStyle(.colorPrimary)
-                                .font(.title)
-                            Text(shop.shopHours)
-                                .font(.title2)
-                        }
-                        HStack {
                             Image(systemName: "mappin.circle.fill")
                                 .foregroundStyle(.colorPrimary)
                                 .font(.title)
                             Text(shop.shopLocation.address)
                                 .font(.title2)
                         }
+                        .foregroundStyle(.colorText)
+                        HStack {
+                            Image(systemName: "clock.circle.fill")
+                                .foregroundStyle(.colorPrimary)
+                                .font(.title)
+                            Text(shop.shopHours)
+                                .font(.title2)
+                        }
+                        .foregroundStyle(.colorText)
                         HStack {
                             Image(systemName: "phone.circle.fill")
                                 .foregroundStyle(.colorPrimary)
@@ -53,6 +55,7 @@ struct ExplorerListView: View {
                             Text(shop.shopPhone)
                                 .font(.title2)
                         }
+                        .foregroundStyle(.colorText)
                     }
                     .padding()
                 }
