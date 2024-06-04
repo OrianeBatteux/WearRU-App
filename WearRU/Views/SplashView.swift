@@ -8,8 +8,41 @@
 import SwiftUI
 
 struct SplashView: View {
+    @State private var isLoading: Bool = false
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color(.colorBackgroundLight)
+                .ignoresSafeArea()
+            VStack{
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(Color.colorBackgroundDark)
+                            .frame(width: 230, height: 230)
+                        RoundedRectangle(cornerRadius: 15)
+                            .fill(Color.colorBackgroundLight)
+                            .frame (width: 210, height: 210)
+                        Image("Logo")
+                            .resizable()
+                            .frame (width: 200, height: 180)
+                        VStack{
+                            if isLoading{
+                                Spacer()
+                                ProgressView()
+                                    .progressViewStyle(CircularProgressViewStyle(tint: .accentColor))
+                                    .scaleEffect(7)
+                            }
+                        }
+                    }
+                    .padding(.bottom, 100)
+                }
+            .onAppear { loadingCircleSplashView() }
+        }
+    }
+    func loadingCircleSplashView() {
+        isLoading = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            isLoading = false
+        }
     }
 }
 
