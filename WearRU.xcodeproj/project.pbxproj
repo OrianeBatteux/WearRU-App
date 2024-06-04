@@ -20,7 +20,6 @@
 		707E3BAE2C0DEDE2003E8724 /* ButtonSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E3BAD2C0DEDE2003E8724 /* ButtonSwitch.swift */; };
 		707E3BB22C0DEDFD003E8724 /* File3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E3BB12C0DEDFD003E8724 /* File3.swift */; };
 		707E3BB42C0F0717003E8724 /* ButtonFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E3BB32C0F0717003E8724 /* ButtonFilter.swift */; };
-		707E3BB62C0F11DB003E8724 /* OpeningButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E3BB52C0F11DB003E8724 /* OpeningButton.swift */; };
 		707E3BB92C0F2087003E8724 /* ItineraryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E3BB82C0F2087003E8724 /* ItineraryButton.swift */; };
 		707E3BBB2C0F3A95003E8724 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E3BBA2C0F3A95003E8724 /* FilterView.swift */; };
 		707E3BBD2C0F4ACD003E8724 /* ShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E3BBC2C0F4ACD003E8724 /* ShopViewModel.swift */; };
@@ -58,7 +57,6 @@
 		707E3BAD2C0DEDE2003E8724 /* ButtonSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSwitch.swift; sourceTree = "<group>"; };
 		707E3BB12C0DEDFD003E8724 /* File3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File3.swift; sourceTree = "<group>"; };
 		707E3BB32C0F0717003E8724 /* ButtonFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFilter.swift; sourceTree = "<group>"; };
-		707E3BB52C0F11DB003E8724 /* OpeningButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningButton.swift; sourceTree = "<group>"; };
 		707E3BB72C0F200F003E8724 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		707E3BB82C0F2087003E8724 /* ItineraryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryButton.swift; sourceTree = "<group>"; };
 		707E3BBA2C0F3A95003E8724 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 				707E3BAD2C0DEDE2003E8724 /* ButtonSwitch.swift */,
 				707E3BB32C0F0717003E8724 /* ButtonFilter.swift */,
 				707E3BB82C0F2087003E8724 /* ItineraryButton.swift */,
-				707E3BB52C0F11DB003E8724 /* OpeningButton.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -345,7 +342,6 @@
 				E2A00A632C0E0B7600D603FD /* ResearchBarExView.swift in Sources */,
 				704E68042C0DC20D00000B89 /* FilterModel.swift in Sources */,
 				E2A00A672C0E0CC700D603FD /* SwitchMapListButtonExView.swift in Sources */,
-				707E3BB62C0F11DB003E8724 /* OpeningButton.swift in Sources */,
 				704E680A2C0DC27300000B89 /* DetailView.swift in Sources */,
 				EAB087812C0DF16B00A7C28C /* SplashView.swift in Sources */,
 				EAB0877F2C0DF15800A7C28C /* ShareModalView.swift in Sources */,

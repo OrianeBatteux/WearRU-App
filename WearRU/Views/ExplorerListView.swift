@@ -22,12 +22,13 @@ struct ExplorerListView: View {
                             .resizable()
                             .frame(width: 350, height: 350)
                             .clipShape(RoundedRectangle(cornerRadius: 20))
-                        HStack {
+                        HStack(alignment: .center) {
                             Text(shop.shopName)
                                 .font(.system(size: 32)).bold()
                                 .foregroundStyle(.colorText)
                             Spacer()
                             Text(shop.shopOpening ? "Ouvert" : "Fermé")
+                                .foregroundStyle(.colorText).bold()
                             Circle()
                                 .frame(height: 20)
                                 .foregroundStyle(shop.shopOpening ? .green : .red)
@@ -60,8 +61,10 @@ struct ExplorerListView: View {
                     .padding()
                 }
             }
-            .background(.colorBackgroundLight)
             .scrollContentBackground(.hidden)
+            ButtonSwitch(label: "Maps", icon: "map.circle.fill"){
+                //action
+            }
         }
     }
 }
