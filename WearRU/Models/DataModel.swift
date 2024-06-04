@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct FilterData: Identifiable {
+    var id = UUID()
+    var imageName: String
+    var title: String
+    var isSelected: Bool = false
+}
