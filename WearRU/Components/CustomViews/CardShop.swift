@@ -10,8 +10,6 @@ import SwiftUI
 
 struct CardShop: View {
     
-    @StateObject var filterViewModel = FilterViewModel()
-    
     var image: String
     var title: String
     var location: String
@@ -20,10 +18,14 @@ struct CardShop: View {
     
     var body: some View {
         VStack(spacing: 16.0) {
-            Image(image)
-                .resizable()
-                .frame(width: 350, height: 350)
-                .clipShape(RoundedRectangle(cornerRadius: 20))
+            ZStack {
+                Image(systemName: "heart.circle.fill")
+                    .foregroundStyle(.red)
+                Image(image)
+                    .resizable()
+                    .frame(width: 350, height: 350)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+            }
             HStack(alignment: .center) {
                 Text(title).bold()
                     .font(.system(size: 30))
