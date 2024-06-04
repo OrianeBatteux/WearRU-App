@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ExplorerListView: View {
     var body: some View {
+        NavigationView {
         VStack {
             ZStack {
                 Image("CardShop_1")
@@ -56,8 +57,13 @@ struct ExplorerListView: View {
                         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                 }
             }
+            ButtonView(label: "Maps", icon: "map.circle.fill"){
+                //action à mettre
+            }
         }
     }
+    }
+    
 }
 
 #Preview {
