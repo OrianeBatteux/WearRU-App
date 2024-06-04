@@ -8,11 +8,27 @@
 import SwiftUI
 
 struct Open_ClosedButtonView: View {
+    
+    var overture: Bool
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            if overture {
+                Text("Ouvert")
+                    .foregroundStyle(.colorText).bold()
+                Circle()
+                    .frame(height: 20)
+                    .foregroundStyle(.green)
+            } else {
+                Text("Fermé")
+                    .foregroundStyle(.colorText).bold()
+                Circle()
+                    .frame(height: 20)
+                    .foregroundStyle(.red)
+            }
+        }
     }
 }
 
 #Preview {
-    Open_ClosedButtonView()
+    Open_ClosedButtonView(overture: false)
 }
