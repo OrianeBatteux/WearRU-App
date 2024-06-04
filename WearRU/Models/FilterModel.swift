@@ -10,5 +10,4 @@ import Foundation
 struct FilterModel: Identifiable {
     var id: Int
     var name: String
-    var isSelected: Bool = false
 }

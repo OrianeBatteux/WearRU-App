@@ -21,7 +21,6 @@
 		709D6BF62C0DB49700F57235 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D6BF52C0DB49700F57235 /* Item.swift */; };
 		709D6BF82C0DB49700F57235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 709D6BF72C0DB49700F57235 /* Assets.xcassets */; };
 		709D6BFB2C0DB49700F57235 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 709D6BFA2C0DB49700F57235 /* Preview Assets.xcassets */; };
-		A5048DBA2C0F961200134931 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5048DB92C0F961200134931 /* FilterView.swift */; };
 		A5048DBC2C0F962600134931 /* ButtonSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5048DBB2C0F962600134931 /* ButtonSwitch.swift */; };
 		A5048DBE2C0F962D00134931 /* ButtonFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5048DBD2C0F962D00134931 /* ButtonFilter.swift */; };
 		A5048DC02C0F963800134931 /* ItineraryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5048DBF2C0F963800134931 /* ItineraryButton.swift */; };
@@ -62,7 +61,6 @@
 		709D6BF52C0DB49700F57235 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		709D6BF72C0DB49700F57235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		709D6BFA2C0DB49700F57235 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A5048DB92C0F961200134931 /* FilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		A5048DBB2C0F962600134931 /* ButtonSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonSwitch.swift; sourceTree = "<group>"; };
 		A5048DBD2C0F962D00134931 /* ButtonFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonFilter.swift; sourceTree = "<group>"; };
 		A5048DBF2C0F963800134931 /* ItineraryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItineraryButton.swift; sourceTree = "<group>"; };
@@ -161,7 +159,6 @@
 		704E680D2C0DC2E900000B89 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				A5048DB92C0F961200134931 /* FilterView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -360,7 +357,6 @@
 				704E680F2C0DC4C200000B89 /* Color+Extensions.swift in Sources */,
 				E23C8CE92C0F12C300AEA272 /* PinExView.swift in Sources */,
 				A5048DC22C0F964A00134931 /* FilterModel.swift in Sources */,
-				A5048DBA2C0F961200134931 /* FilterView.swift in Sources */,
 				E23C8CEB2C0F5AA100AEA272 /* FilterListExView.swift in Sources */,
 				A5048DBE2C0F962D00134931 /* ButtonFilter.swift in Sources */,
 				E23C8CE72C0EFA7C00AEA272 /* PinShape.swift in Sources */,
