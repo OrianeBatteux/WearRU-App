@@ -10,6 +10,8 @@ import SwiftUI
 
 struct CardShop: View {
     
+    @StateObject var filterViewModel = FilterViewModel()
+    
     var image: String
     var title: String
     var location: String
@@ -55,10 +57,13 @@ struct CardShop: View {
                 ItineraryButton()
                     .foregroundStyle(.colorText).bold()
             }
+            HStack {
+                buttonFilter()
+            }
         }
         .padding(.horizontal)
     }
-    }
+}
 
 #Preview {
     CardShop(image: "Test", title: "Test", location: "Test", phone: "Test", hours: "Test")

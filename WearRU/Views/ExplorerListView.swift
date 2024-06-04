@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ExplorerListView: View {
-    @Environment(\.dismiss) private var dismiss
+    @State var isFilterTapped = false
     var body: some View {
         HStack {
             ResearchBarExView()

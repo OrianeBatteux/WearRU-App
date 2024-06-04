@@ -7,12 +7,16 @@
 
 import SwiftUI
 
-struct FilterView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    FilterView()
-}
+//struct FilterView: View {
+//    @StateObject var filterViewModel = FilterViewModel()
+//    var body: some View {
+//        ForEach($filterViewModel.filter) { filter in
+//            HStack {
+//                Image(systemName: filter.selected ? "checkmark.circle.fill" : "circle")
+//                Text(filter.name)
+//                Spacer()
+//            }
+//            .padding(.horizontal)
+//        }
+//    }
+//}
