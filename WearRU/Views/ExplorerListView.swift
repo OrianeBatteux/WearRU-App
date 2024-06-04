@@ -23,22 +23,41 @@ struct ExplorerListView: View {
                             .frame(width: 350, height: 350)
                             .clipShape(RoundedRectangle(cornerRadius: 20))
                         HStack {
-                        Text(shop.shopName)
-                            .font(.title).bold()
-                            .foregroundStyle(.colorText)
+                            Text(shop.shopName)
+                                .font(.title).bold()
+                                .foregroundStyle(.colorText)
                             Spacer()
                             Text(shop.shopOpening ? "Ouvert" : "Fermé")
                             Circle()
                                 .frame(height: 20)
                                 .foregroundStyle(shop.shopOpening ? .green : .red)
                         }
-                        Text("\(Image(systemName: "clock.circle.fill")) \(shop.shopHours)")
-                        Text("\(Image(systemName:"mappin.circle.fill")) \(shop.shopLocation.address)")
-                        Text("\(Image(systemName: "phone.circle.fill"))\(shop.shopPhone)")
-                            .font(.title2)
-                    }.padding()
+                        HStack {
+                            Image(systemName: "clock.circle.fill")
+                                .foregroundStyle(.colorPrimary)
+                                .font(.title)
+                            Text(shop.shopHours)
+                                .font(.title2)
+                        }
+                        HStack {
+                            Image(systemName: "mappin.circle.fill")
+                                .foregroundStyle(.colorPrimary)
+                                .font(.title)
+                            Text(shop.shopLocation.address)
+                                .font(.title2)
+                        }
+                        HStack {
+                            Image(systemName: "phone.circle.fill")
+                                .foregroundStyle(.colorPrimary)
+                                .font(.title)
+                            Text(shop.shopPhone)
+                                .font(.title2)
+                        }
+                    }
+                    .padding()
                 }
             }
+            .scrollContentBackground(.hidden)
         }
     }
 }
