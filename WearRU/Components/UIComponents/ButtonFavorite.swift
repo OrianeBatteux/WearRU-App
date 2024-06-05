@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct ButtonFavorite: View {
-    @State var isFilterTapped = false
+    @State var isFavoriteTapped = false
     var body: some View {
         Button(action: {
-            isFilterTapped.toggle()
+            isFavoriteTapped.toggle()
+            print("add favorite")
         }, label: {
                 Image(systemName: "heart.circle.fill")
-                    .foregroundStyle(isFilterTapped ? .red : .colorText)
+                    .foregroundStyle(isFavoriteTapped ? .red : .colorText)
                     .font(.system(size: 30))
-                    .symbolEffect(.bounce, value: isFilterTapped)
+                    .symbolEffect(.bounce, value: isFavoriteTapped)
         })
     }
 }
