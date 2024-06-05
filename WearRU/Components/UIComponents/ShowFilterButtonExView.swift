@@ -25,7 +25,7 @@ struct ShowFilterButtonExView: View {
             }
         })
         .sheet(isPresented: $isVisible) {
-        } content: {ExplorerFilterModalView(height: 0.7)}
+        } content: {ExplorerFilterModalView(isVisible: $isVisible, height: 0.5)}
     }
 }
 
