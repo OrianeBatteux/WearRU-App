@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension Color {
+extension Color { //extension pour ajouter des couleurs perso à "Color"
     static let primaryColor = Color("PrimaryColor")
     static let secondaryColor = Color("SecondaryColor")
     

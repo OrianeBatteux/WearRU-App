@@ -9,7 +9,9 @@ import Foundation
 import MapKit
 
 class ShopViewModel: ObservableObject {
-    @Published var shops: [Shop] = []
+    @Published var shops: [Shop] = [] //Published, propriété wrapper marque une propriété (shops) pour permettre l'émission d'événements chaque fois que la valeur de cette propriété change.
+    //    Avec @Published : Lorsque la valeur de shops change, toutes les vues qui observent cette propriété seront automatiquement mises à jour.
+    //    Sans @Published : Les vues ne seront plus automatiquement mises à jour lorsque la valeur de shops change. Les changements ne seront pas signalés et, par conséquent, l'interface utilisateur ne réagira pas aux modifications de la liste des magasins.
     init() {
         shops = [
             Shop(shopName: "Erica Zhou", shopImage: "CardShop_1", shopOpening: true, shopHours: "Lun-Sam: 10:00 – 20:30 \nDim: 10:00 – 19:00", shopPhone: "01 03 87 27 98", shopLocation: Location(coordinate : CLLocationCoordinate2D(latitude: 48.88105392456055, longitude: 2.4767637252807617), address: "Westfield Rosny 2")),
