@@ -13,8 +13,10 @@ struct ExplorerListView: View {
             NavigationStack {
                 HStack {
                     ResearchBarExView()
+                    Spacer()
                     ShowFilterButtonExView()
                 }
+                .padding()
                 List {
                     ForEach(viewModel.shops) { shop in
                         VStack(alignment: .leading, spacing: 16.0) {
@@ -62,9 +64,10 @@ struct ExplorerListView: View {
                     }
                 }
                 .scrollContentBackground(.hidden)
-                ButtonSwitch(label: "Maps", icon: "map.circle.fill"){
-                    print("Switch on Map View")
-                }
+//                ButtonSwitch(label: "Maps", icon: "map.circle.fill"){
+//                    print("Switch on Map View")
+//                }
+//                SwitchMapListButtonExView(isOnMapMod: $isOnMapMod)
             }
         }
     }

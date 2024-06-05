@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct SwitchMapListButtonExView: View {
+    @Binding var isOnMapMod : Bool
     var body: some View {
         Button(action: {
-            
+            isOnMapMod.toggle()
         }, label: {
             ZStack {
                 RoundedRectangle(cornerRadius: 15)
@@ -18,19 +19,18 @@ struct SwitchMapListButtonExView: View {
                     .frame(width : 144, height : 48)
                     .shadow(radius: 2, x : 0, y : 4)
                 HStack {
-                    Text("Liste")
+                    Text(isOnMapMod ? "Liste" : "Carte")
                         .foregroundColor(.black)
-                    Spacer()
-                    Image(systemName: "list.bullet")
+                    Image(systemName: isOnMapMod ? "list.bullet" : "map.fill")
                 }
                 .font(.system(size: 24, weight: .bold))
                 .padding(24)
-                .frame(width : 144, height : 48)
+                .frame(width : 160, height : 48)
             }
         })
     }
 }
 
 #Preview {
-    SwitchMapListButtonExView()
+    SwitchMapListButtonExView(isOnMapMod: .constant(true))
 }

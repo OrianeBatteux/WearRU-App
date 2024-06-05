@@ -8,12 +8,20 @@
 import SwiftUI
 
 struct PinExView: View {
-    var pinSize : Double
+    @State var isSelected : Bool = false
+    @State var pinSize : Double
+    let selectedScale : Double = 1.5
+//    @State var pinDefaultSize : Double = pinSize
     var name : String
     
     var body: some View {
         Button(action: {
-            
+            isSelected.toggle()
+            if !isSelected {
+                pinSize /= selectedScale
+            } else {
+                pinSize *= selectedScale
+            }
         }, label: {
             ZStack {
                 Ellipse()
@@ -21,7 +29,7 @@ struct PinExView: View {
                     .opacity(0.2)
                     .frame(width : pinSize, height : pinSize / 2)
                 PinShape(pinSize: pinSize)
-                    .fill(.colorPrimary)
+                    .fill(isSelected ? .colorPrimary : .colorBackgroundDark)
                     .stroke(.white, lineWidth: 2)
                 Circle()
                     .fill(.white)
@@ -47,7 +55,6 @@ struct PinExView: View {
         })
         .frame(width: pinSize * 1.3, height: pinSize * 2.8)
         // Offset du tout pour remettre l'ensemble au bon endroit
-//        .background(.green) // Pour afficher la taille de la hitbox
         .offset(y : -pinSize * 0.3)
     }
 }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ExplorerFilterModalView: View {
     @StateObject var filterViewModel : FilterViewModel = FilterViewModel()
+    @Binding var isVisible : Bool
     var height : Double
     
     var body: some View {
@@ -16,13 +17,16 @@ struct ExplorerFilterModalView: View {
             Color(.colorBackgroundLight)
                 .ignoresSafeArea()
             VStack {
+                RoundedRectangle(cornerRadius: 15)
+                    .frame(width: 80, height: 10)
+                    .opacity(0.2)
                 HStack(alignment: .center) {
                     Text("Filtres")
                         .font(.system(size: 40)).bold()
                         .foregroundStyle(.colorText)
                     Spacer()
                     Button(action: {
-                        
+                        isVisible = false
                     }, label: {
                         Image(systemName: "xmark.circle.fill")
                             .font(.title)
@@ -37,8 +41,9 @@ struct ExplorerFilterModalView: View {
             }
             .padding()
         }
+        .presentationDetents([.fraction(height)])
     }
 }
 #Preview {
-    ExplorerFilterModalView(height : 0.4)
+    ExplorerFilterModalView(isVisible: .constant(true), height : 0.4)
 }
