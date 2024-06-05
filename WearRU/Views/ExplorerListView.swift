@@ -22,6 +22,12 @@ struct ExplorerListView: View {
                                 .resizable()
                                 .frame(width: 350, height: 350)
                                 .clipShape(RoundedRectangle(cornerRadius: 20))
+                            HStack {
+                                ButtonFavorite()
+                                Image(systemName: "square.and.arrow.up.circle.fill")
+                            }
+                            .font(.title)
+                            .foregroundStyle(.colorText)
                             HStack(alignment: .center) {
                                 Text(shop.shopName)
                                     .font(.system(size: 32)).bold()
@@ -37,10 +43,12 @@ struct ExplorerListView: View {
                                 Image(systemName: "mappin.circle.fill")
                                     .foregroundStyle(.colorPrimary)
                                     .font(.title)
+                                
                                 Text(shop.shopLocation.address)
                                     .font(.title2)
                             }
                             .foregroundStyle(.colorText)
+                            
                             HStack {
                                 Image(systemName: "clock.circle.fill")
                                     .foregroundStyle(.colorPrimary)
