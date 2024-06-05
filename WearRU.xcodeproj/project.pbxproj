@@ -237,8 +237,8 @@
 		709D6C032C0DB74700F57235 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				A593158E2C1098280064B3A8 /* Functions */,
 				704E68102C0DC54800000B89 /* Extensions */,
-				A593158C2C1091990064B3A8 /* ShareModal.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -249,6 +249,14 @@
 				707E3BB12C0DEDFD003E8724 /* File3.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A593158E2C1098280064B3A8 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				A593158C2C1091990064B3A8 /* ShareModal.swift */,
+			);
+			path = Functions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
