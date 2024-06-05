@@ -13,12 +13,12 @@ final class User {
     var id: UUID
     var name: String
     var email: String
-    var tasks: [Task]
+//    var tasks: [Task]
     
-    init(id: UUID = UUID(), name: String, email: String, tasks: [Task] = []) {
+    init(id: UUID = UUID(), name: String, email: String) {
         self.id = id
         self.name = name
         self.email = email
-        self.tasks = tasks
+//        self.tasks = tasks
     }
 }

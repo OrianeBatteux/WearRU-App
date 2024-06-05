@@ -9,17 +9,23 @@ import SwiftUI
 
 struct buttonFilter: View {
     @State var isFilterTapped = false
+    let buttonText : String
+    
     var body: some View {
-        Button("Grandes Tailles") {
+        Button(action: {
             isFilterTapped.toggle()
-        }
-        .padding()
-        .foregroundStyle(.white).bold()
-        .background(.colorPrimary)
-        .clipShape(RoundedRectangle(cornerRadius: 20))
+        }, label: {
+            ZStack {
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(isFilterTapped ? .colorPrimary : .colorBackgroundDark)
+                    .frame(width: 100, height: 40)
+                Text(buttonText)
+                    .foregroundColor(.colorBackgroundLight)
+            }
+        })
     }
 }
 
 #Preview {
-    buttonFilter()
+    buttonFilter(buttonText: "Test")
 }

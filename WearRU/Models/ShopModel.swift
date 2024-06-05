@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MapKit
 
 struct Shop: Identifiable {
     let id : UUID = UUID()
@@ -19,7 +20,8 @@ struct Shop: Identifiable {
 
 struct Location: Identifiable {
     let id : UUID = UUID()
-    var lat: Double
-    var long: Double
+    let coordinate : CLLocationCoordinate2D
     var address: String
     }
+
+//var shops : ShopViewModel = ShopViewModel()

@@ -1,4 +1,3 @@
-//
 //  Item.swift
 //  WearRU
 //

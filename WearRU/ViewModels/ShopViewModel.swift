@@ -6,21 +6,22 @@
 //
 
 import Foundation
+import MapKit
 
 class ShopViewModel: ObservableObject {
     @Published var shops: [Shop] = []
     init() {
         shops = [
-            Shop(shopName: "Erica Zhou", shopImage: "CardShop_1", shopOpening: true, shopHours: "Lun-Sam: 10:00 – 20:30 \nDim: 10:00 – 19:00", shopPhone: "01 03 87 27 98", shopLocation: Location(lat: 48.8566, long: 2.3522, address: "Westfield Rosny 2")),
-            Shop(shopName: "Chic et Élégance", shopImage: "CardShop_2", shopOpening: false, shopHours: "Lun-Sam: 10:00 – 20:30 \nDim: 10:00 – 19:00", shopPhone: "01 03 87 27 98", shopLocation: Location(lat: 48.8566, long: 2.3522, address: "Westfield Rosny 2")),
-            Shop(shopName: "Chic et Élégance", shopImage: "CardShop_3", shopOpening: true, shopHours: "Lun-Sam: 10:00 – 20:30 \nDim: 10:00 – 19:00", shopPhone: "01 03 87 27 98", shopLocation: Location(lat: 48.8566, long: 2.3522, address: "Westfield Rosny 2")),
-            Shop(shopName: "Mode Éternelle", shopImage: "CardShop_4", shopOpening: false, shopHours: "Lun-Sam: 10:00 – 20:30 \nDim: 10:00 – 19:00", shopPhone: "01 03 87 27 98", shopLocation: Location(lat: 48.8566, long: 2.3522, address: "Westfield Rosny 2")),
-            Shop(shopName: "Style Urbain", shopImage: "CardShop_5", shopOpening: true, shopHours: "Lun-Sam: 10:00 – 20:30 \nDim: 10:00 – 19:00", shopPhone: "01 03 87 27 98", shopLocation: Location(lat: 48.8566, long: 2.3522, address: "Westfield Rosny 2")),
-            Shop(shopName: "Élégance Parisienne", shopImage: "CardShop_6", shopOpening: false, shopHours: "Lun-Sam: 10:00 – 20:30 \nDim: 10:00 – 19:00", shopPhone: "01 03 87 27 98", shopLocation: Location(lat: 48.8566, long: 2.3522, address: "Westfield Rosny 2")),
-            Shop(shopName: "Tendance Boutique", shopImage: "CardShop_7", shopOpening: true, shopHours: "Lun-Sam: 10:00 – 20:30 \nDim: 10:00 – 19:00", shopPhone: "01 03 87 27 98", shopLocation: Location(lat: 48.8566, long: 2.3522, address: "Westfield Rosny 2")),
-            Shop(shopName: "Urban Fashion", shopImage: "CardShop_8", shopOpening: false, shopHours: "Lun-Sam: 10:00 – 20:30 \nDim: 10:00 – 19:00", shopPhone: "01 03 87 27 98", shopLocation: Location(lat: 48.8566, long: 2.3522, address: "Westfield Rosny 2")),
-            Shop(shopName: "Belle et Fashion", shopImage: "CardShop_9", shopOpening: true, shopHours: "Lun-Sam: 10:00 – 20:30 \nDim: 10:00 – 19:00", shopPhone: "01 03 87 27 98", shopLocation: Location(lat: 40.7128, long: -74.0060, address: "Westfield Rosny 2")),
-            Shop(shopName: "Glamour Boutique", shopImage: "CardShop_10", shopOpening: false, shopHours: "Lun-Sam: 10:00 – 20:30 \nDim: 10:00 – 19:00", shopPhone: "01 03 87 27 98", shopLocation: Location(lat: 34.0522, long: -118.2437, address: "Westfield Rosny 2"))
+            Shop(shopName: "Erica Zhou", shopImage: "CardShop_1", shopOpening: true, shopHours: "Lun-Sam: 10:00 – 20:30 \nDim: 10:00 – 19:00", shopPhone: "01 03 87 27 98", shopLocation: Location(coordinate : CLLocationCoordinate2D(latitude: 48.88105392456055, longitude: 2.4767637252807617), address: "Westfield Rosny 2")),
+            Shop(shopName: "Chic et Élégance", shopImage: "CardShop_2", shopOpening: false, shopHours: "Lun-Sam: 10:00 – 20:30 \nDim: 10:00 – 19:00", shopPhone: "01 03 87 27 98", shopLocation: Location(coordinate : CLLocationCoordinate2D(latitude: 48.89105392456055, longitude: 2.4707637252807617), address: "Westfield Rosny 2")),
+            Shop(shopName: "Chic et Élégance", shopImage: "CardShop_3", shopOpening: true, shopHours: "Lun-Sam: 10:00 – 20:30 \nDim: 10:00 – 19:00", shopPhone: "01 03 87 27 98", shopLocation: Location(coordinate : CLLocationCoordinate2D(latitude: 48.88505392456055, longitude: 2.4787637252807617), address: "Westfield Rosny 2")),
+            Shop(shopName: "Mode Éternelle", shopImage: "CardShop_4", shopOpening: false, shopHours: "Lun-Sam: 10:00 – 20:30 \nDim: 10:00 – 19:00", shopPhone: "01 03 87 27 98", shopLocation: Location(coordinate : CLLocationCoordinate2D(latitude: 48.87105392456055, longitude: 2.4867637252807617), address: "Westfield Rosny 2")),
+            Shop(shopName: "Style Urbain", shopImage: "CardShop_5", shopOpening: true, shopHours: "Lun-Sam: 10:00 – 20:30 \nDim: 10:00 – 19:00", shopPhone: "01 03 87 27 98", shopLocation: Location(coordinate : CLLocationCoordinate2D(latitude: 48.88905392456055, longitude: 2.4667637252807617), address: "Westfield Rosny 2")),
+            Shop(shopName: "Élégance Parisienne", shopImage: "CardShop_6", shopOpening: false, shopHours: "Lun-Sam: 10:00 – 20:30 \nDim: 10:00 – 19:00", shopPhone: "01 03 87 27 98", shopLocation: Location(coordinate : CLLocationCoordinate2D(latitude: 48.88305392456055, longitude: 2.4697637252807617), address: "Westfield Rosny 2")),
+            Shop(shopName: "Tendance Boutique", shopImage: "CardShop_7", shopOpening: true, shopHours: "Lun-Sam: 10:00 – 20:30 \nDim: 10:00 – 19:00", shopPhone: "01 03 87 27 98", shopLocation: Location(coordinate : CLLocationCoordinate2D(latitude: 48.89005392456055, longitude: 2.4817637252807617), address: "Westfield Rosny 2")),
+            Shop(shopName: "Urban Fashion", shopImage: "CardShop_8", shopOpening: false, shopHours: "Lun-Sam: 10:00 – 20:30 \nDim: 10:00 – 19:00", shopPhone: "01 03 87 27 98", shopLocation: Location(coordinate : CLLocationCoordinate2D(latitude: 48.88605392456055, longitude: 2.4727637252807617), address: "Westfield Rosny 2")),
+            Shop(shopName: "Belle et Fashion", shopImage: "CardShop_9", shopOpening: true, shopHours: "Lun-Sam: 10:00 – 20:30 \nDim: 10:00 – 19:00", shopPhone: "01 03 87 27 98", shopLocation: Location(coordinate : CLLocationCoordinate2D(latitude: 48.87905392456055, longitude: 2.4757637252807617), address: "Westfield Rosny 2")),
+            Shop(shopName: "Glamour Boutique", shopImage: "CardShop_10", shopOpening: false, shopHours: "Lun-Sam: 10:00 – 20:30 \nDim: 10:00 – 19:00", shopPhone: "01 03 87 27 98", shopLocation: Location(coordinate : CLLocationCoordinate2D(latitude: 48.87605392456055, longitude: 2.4807637252807617), address: "Westfield Rosny 2"))
         ]
     }
 }
