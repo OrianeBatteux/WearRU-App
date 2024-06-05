@@ -24,6 +24,9 @@
 		A5048DC42C0F964F00134931 /* ShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5048DC32C0F964F00134931 /* ShopModel.swift */; };
 		A5048DC72C0F966000134931 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5048DC52C0F966000134931 /* FilterViewModel.swift */; };
 		A5048DC82C0F966000134931 /* ShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5048DC62C0F966000134931 /* ShopViewModel.swift */; };
+		A59315892C108E970064B3A8 /* ButtonFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59315882C108E970064B3A8 /* ButtonFavorite.swift */; };
+		A593158B2C1090990064B3A8 /* ButtonShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = A593158A2C1090990064B3A8 /* ButtonShare.swift */; };
+		A593158D2C1091990064B3A8 /* ShareModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A593158C2C1091990064B3A8 /* ShareModal.swift */; };
 		E23C8CE72C0EFA7C00AEA272 /* PinShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23C8CE62C0EFA7C00AEA272 /* PinShape.swift */; };
 		E23C8CE92C0F12C300AEA272 /* PinExView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23C8CE82C0F12C300AEA272 /* PinExView.swift */; };
 		E23C8CEB2C0F5AA100AEA272 /* FilterListExView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23C8CEA2C0F5AA100AEA272 /* FilterListExView.swift */; };
@@ -62,6 +65,9 @@
 		A5048DC32C0F964F00134931 /* ShopModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopModel.swift; sourceTree = "<group>"; };
 		A5048DC52C0F966000134931 /* FilterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		A5048DC62C0F966000134931 /* ShopViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewModel.swift; sourceTree = "<group>"; };
+		A59315882C108E970064B3A8 /* ButtonFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFavorite.swift; sourceTree = "<group>"; };
+		A593158A2C1090990064B3A8 /* ButtonShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonShare.swift; sourceTree = "<group>"; };
+		A593158C2C1091990064B3A8 /* ShareModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareModal.swift; sourceTree = "<group>"; };
 		E23C8CE62C0EFA7C00AEA272 /* PinShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinShape.swift; sourceTree = "<group>"; };
 		E23C8CE82C0F12C300AEA272 /* PinExView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinExView.swift; sourceTree = "<group>"; };
 		E23C8CEA2C0F5AA100AEA272 /* FilterListExView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterListExView.swift; sourceTree = "<group>"; };
@@ -146,6 +152,8 @@
 				E23C8CEA2C0F5AA100AEA272 /* FilterListExView.swift */,
 				E23C8CE62C0EFA7C00AEA272 /* PinShape.swift */,
 				A5048DBB2C0F962600134931 /* ButtonSwitch.swift */,
+				A59315882C108E970064B3A8 /* ButtonFavorite.swift */,
+				A593158A2C1090990064B3A8 /* ButtonShare.swift */,
 				A5048DBD2C0F962D00134931 /* ButtonFilter.swift */,
 				A5048DBF2C0F963800134931 /* ItineraryButton.swift */,
 			);
@@ -232,6 +240,7 @@
 		709D6C032C0DB74700F57235 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				A593158E2C1098280064B3A8 /* Functions */,
 				704E68102C0DC54800000B89 /* Extensions */,
 			);
 			path = Utilities;
@@ -243,6 +252,14 @@
 				707E3BB12C0DEDFD003E8724 /* File3.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A593158E2C1098280064B3A8 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				A593158C2C1091990064B3A8 /* ShareModal.swift */,
+			);
+			path = Functions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,9 +365,11 @@
 				709D6BF42C0DB49700F57235 /* ContentView.swift in Sources */,
 				704E68002C0DC1D900000B89 /* DatabaseService.swift in Sources */,
 				707E3BB22C0DEDFD003E8724 /* File3.swift in Sources */,
+				A59315892C108E970064B3A8 /* ButtonFavorite.swift in Sources */,
 				704E680F2C0DC4C200000B89 /* Color+Extensions.swift in Sources */,
 				E23C8CE92C0F12C300AEA272 /* PinExView.swift in Sources */,
 				A5048DC22C0F964A00134931 /* FilterModel.swift in Sources */,
+				A593158B2C1090990064B3A8 /* ButtonShare.swift in Sources */,
 				E23C8CEB2C0F5AA100AEA272 /* FilterListExView.swift in Sources */,
 				EA2003FE2C1099E4002BE87E /* ViewCoordinator.swift in Sources */,
 				A5048DBE2C0F962D00134931 /* ButtonFilter.swift in Sources */,
@@ -359,6 +378,7 @@
 				704E67FE2C0DC1CB00000B89 /* NetworkService.swift in Sources */,
 				EAB087772C0DF0F300A7C28C /* NewsSearchModalView.swift in Sources */,
 				EAB087752C0DF0C500A7C28C /* NewsArticleView.swift in Sources */,
+				A593158D2C1091990064B3A8 /* ShareModal.swift in Sources */,
 				EAB087792C0DF11000A7C28C /* ExplorerShopModalView.swift in Sources */,
 				709D6BF22C0DB49700F57235 /* WearRUApp.swift in Sources */,
 				E2A00A652C0E0C7E00D603FD /* ShowFilterButtonExView.swift in Sources */,
