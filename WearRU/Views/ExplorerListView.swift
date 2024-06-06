@@ -9,11 +9,8 @@ import SwiftUI
 
 struct ExplorerListView: View {
     @StateObject var viewModel = ShopViewModel()//propriété wrapper pour déclarer un objet observable qui est créé et possédé par la vue. Elle crée et gère le cycle de vie de cet objet. Cela signifie que l'objet est instancié lorsque la vue est créée et il est détruit lorsque la vue est détruite. En gros, il garantit que les mises à jour de la ViewModel : Shop déclenchent une mise à jour de la vue ExplorerListView.
+    @State private var isOnMapMod : Bool = true
     var body: some View {
-        HStack {
-            ResearchBarExView()
-            ShowFilterButtonExView()
-        }
         List {
             ForEach(viewModel.shops) { shop in
                 VStack(alignment: .leading, spacing: 16.0) {
@@ -22,8 +19,16 @@ struct ExplorerListView: View {
                         .frame(width: 350, height: 350)
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                     HStack {
-                        ButtonFavorite()
-                        ButtonShare()
+                        Button(action: {
+                            print("Add favorite")
+                        }) {
+                            ButtonFavorite()
+                        }
+                        Button(action: {
+                            print("Share content")
+                        }) {
+                            ButtonShare()
+                        }
                     }
                     HStack(alignment: .center) {
                         Text(shop.shopName)
@@ -67,9 +72,6 @@ struct ExplorerListView: View {
             }
         }
         .scrollContentBackground(.hidden)
-        ButtonSwitch(label: "Maps", icon: "map.circle.fill"){
-            print("Switch on Map View")
-        }
     }
 }
 

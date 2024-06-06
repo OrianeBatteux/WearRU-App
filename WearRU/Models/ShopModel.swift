@@ -16,6 +16,7 @@ struct Shop: Identifiable {
     var shopHours : String
     var shopPhone : String
     var shopLocation: Location
+    var isFavorite: Bool
 }
 
 struct Location: Identifiable {
