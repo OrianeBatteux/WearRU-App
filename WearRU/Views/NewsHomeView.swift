@@ -26,7 +26,7 @@ struct NewsHomeView: View {
                                         CarouselExView(newsTitle: "Coucou", newsImage: "CardShop_2")
                                         CarouselExView(newsTitle: "Coucou", newsImage: "CardShop_3")
                                         CarouselExView(newsTitle: "Coucou", newsImage: "CardShop_4")
-                                        CarouselExView(newsTitle: "Coucou", newsImage: "CardShop_5")
+                                            CarouselExView(newsTitle: "Coucou", newsImage: "CardShop_5")
                                     }
                                 }
                             }
