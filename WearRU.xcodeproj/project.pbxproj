@@ -32,7 +32,6 @@
 		E2A00A632C0E0B7600D603FD /* ResearchBarExView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A00A622C0E0B7600D603FD /* ResearchBarExView.swift */; };
 		E2A00A652C0E0C7E00D603FD /* ShowFilterButtonExView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A00A642C0E0C7E00D603FD /* ShowFilterButtonExView.swift */; };
 		E2A00A672C0E0CC700D603FD /* SwitchMapListButtonExView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A00A662C0E0CC700D603FD /* SwitchMapListButtonExView.swift */; };
-		E2C892F92C10594E004B399D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C892F82C10594E004B399D /* Item.swift */; };
 		EA2003FE2C1099E4002BE87E /* ViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2003FD2C1099E4002BE87E /* ViewCoordinator.swift */; };
 		EAB087712C0DF05C00A7C28C /* ExplorerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB087702C0DF05C00A7C28C /* ExplorerListView.swift */; };
 		EAB087732C0DF08F00A7C28C /* NewsHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB087722C0DF08F00A7C28C /* NewsHomeView.swift */; };
@@ -72,7 +71,6 @@
 		E2A00A622C0E0B7600D603FD /* ResearchBarExView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchBarExView.swift; sourceTree = "<group>"; };
 		E2A00A642C0E0C7E00D603FD /* ShowFilterButtonExView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowFilterButtonExView.swift; sourceTree = "<group>"; };
 		E2A00A662C0E0CC700D603FD /* SwitchMapListButtonExView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchMapListButtonExView.swift; sourceTree = "<group>"; };
-		E2C892F82C10594E004B399D /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		EA2003FD2C1099E4002BE87E /* ViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoordinator.swift; sourceTree = "<group>"; };
 		EAB087702C0DF05C00A7C28C /* ExplorerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerListView.swift; sourceTree = "<group>"; };
 		EAB087722C0DF08F00A7C28C /* NewsHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHomeView.swift; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 		704E680B2C0DC2BB00000B89 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				704E680D2C0DC2E900000B89 /* CustomViews */,
 				704E680C2C0DC2E500000B89 /* UIComponents */,
 			);
 			path = Components;
@@ -143,6 +140,7 @@
 		704E680C2C0DC2E500000B89 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				A50E2F862C11BFD9002C81EF /* SearchViews */,
 				E2A00A622C0E0B7600D603FD /* ResearchBarExView.swift */,
 				E2A00A642C0E0C7E00D603FD /* ShowFilterButtonExView.swift */,
 				E2A00A662C0E0CC700D603FD /* SwitchMapListButtonExView.swift */,
@@ -155,13 +153,6 @@
 				A5048DBF2C0F963800134931 /* ItineraryButton.swift */,
 			);
 			path = UIComponents;
-			sourceTree = "<group>";
-		};
-		704E680D2C0DC2E900000B89 /* CustomViews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		704E68102C0DC54800000B89 /* Extensions */ = {
@@ -229,7 +220,6 @@
 				704E68112C0DC70800000B89 /* User.swift */,
 				A5048DC12C0F964A00134931 /* FilterModel.swift */,
 				A5048DC32C0F964F00134931 /* ShopModel.swift */,
-				E2C892F82C10594E004B399D /* Item.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -249,6 +239,13 @@
 				707E3BB12C0DEDFD003E8724 /* File3.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A50E2F862C11BFD9002C81EF /* SearchViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SearchViews;
 			sourceTree = "<group>";
 		};
 		A593158E2C1098280064B3A8 /* Functions */ = {
@@ -357,7 +354,6 @@
 				EAB087812C0DF16B00A7C28C /* SplashView.swift in Sources */,
 				EAB0877F2C0DF15800A7C28C /* ShareModalView.swift in Sources */,
 				704E68072C0DC24400000B89 /* ExplorerMapView.swift in Sources */,
-				E2C892F92C10594E004B399D /* Item.swift in Sources */,
 				709D6BF42C0DB49700F57235 /* ContentView.swift in Sources */,
 				704E68002C0DC1D900000B89 /* DatabaseService.swift in Sources */,
 				707E3BB22C0DEDFD003E8724 /* File3.swift in Sources */,
