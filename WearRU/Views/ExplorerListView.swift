@@ -13,70 +13,19 @@ struct ExplorerListView: View {
     var body: some View {
         NavigationStack {
             List {
-                
                 CustomSearchSuggestionView(viewModel: viewModel)
-                
                 ForEach(viewModel.filteredShops) { shop in
-                    VStack(alignment: .leading, spacing: 16.0) {
-                        Image(shop.shopImage)
-                            .resizable()
-                            .frame(width: 350, height: 350)
-                            .clipShape(RoundedRectangle(cornerRadius: 20))
-                        HStack {
-                            Button(action: {
-                                print("Add favorite")
-                            }) {
-                                ButtonFavorite()
-                            }
-                            Button(action: {
-                                print("Share content")
-                            }) {
-                                ButtonShare()
-                            }
-                        }
-                        HStack(alignment: .center) {
-                            Text(shop.shopName)
-                                .font(.system(size: 32)).bold()
-                                .foregroundStyle(.colorText)
-                            Spacer()
-                            Text(shop.shopOpening ? "Ouvert" : "Fermé")
-                                .foregroundStyle(.colorText).bold()
-                            Circle()
-                                .frame(height: 20)
-                                .foregroundStyle(shop.shopOpening ? .green : .red)
-                        }
-                        HStack {
-                            Image(systemName: "mappin.circle.fill")
-                                .foregroundStyle(.colorPrimary)
-                                .font(.title)
-                            
-                            Text(shop.shopLocation.address)
-                                .font(.title2)
-                        }
-                        .foregroundStyle(.colorText)
-                        
-                        HStack {
-                            Image(systemName: "clock.circle.fill")
-                                .foregroundStyle(.colorPrimary)
-                                .font(.title)
-                            Text(shop.shopHours)
-                                .font(.title2)
-                        }
-                        .foregroundStyle(.colorText)
-                        HStack {
-                            Image(systemName: "phone.circle.fill")
-                                .foregroundStyle(.colorPrimary)
-                                .font(.title)
-                            Text(shop.shopPhone)
-                                .font(.title2)
-                        }
-                        .foregroundStyle(.colorText)
-                    }
-                    .padding()
+                    ShopCardView(shop: shop)
+                        .background(.colorBackgroundLight)
+                        .cornerRadius(20)
+                        .frame(width: 370, height: 700)
+                        .shadow(radius: 10)
+                    
                 }
+                .listRowSeparator(.hidden, edges: .all)
                 
             }
-            .scrollContentBackground(.hidden)
+            .listStyle(.plain)
             .searchable(text: $viewModel.searchText, suggestions: {
                 ForEach(viewModel.filteredSuggestions) { shop in
                     Text(shop.shopName)
@@ -86,7 +35,6 @@ struct ExplorerListView: View {
             })
             
         }
-        
     }
 }
 

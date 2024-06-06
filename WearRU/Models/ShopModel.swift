@@ -7,6 +7,7 @@
 
 import Foundation
 import MapKit
+import SwiftUI
 
 struct Shop: Identifiable {
     let id : UUID = UUID()
