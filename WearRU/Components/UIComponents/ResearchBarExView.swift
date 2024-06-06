@@ -8,11 +8,28 @@
 import SwiftUI
 
 struct ResearchBarExView: View {
-    @StateObject var viewModel = ShopViewModel()
-    @State private var searchText = ""
+    @State private var researchText : String = ""
     
     var body: some View {
-Text("test")
+        ZStack {
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(.colorPrimary, lineWidth: 6)
+                .fill(.white)
+                .frame(width : 280, height : 36)
+            
+            HStack {
+            TextField("Recherche" ,text: $researchText)
+                Spacer()
+                Button(action: {
+                    
+                }, label: {
+                    Image(systemName: "mic.fill")
+                })
+            }
+            .foregroundColor(.colorText)
+            .font(.system(size: 20))
+            .frame(width : 260)
+        }
     }
 }
 
