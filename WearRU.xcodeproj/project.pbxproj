@@ -18,7 +18,6 @@
 		709D6BF82C0DB49700F57235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 709D6BF72C0DB49700F57235 /* Assets.xcassets */; };
 		709D6BFB2C0DB49700F57235 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 709D6BFA2C0DB49700F57235 /* Preview Assets.xcassets */; };
 		A5048DBE2C0F962D00134931 /* ButtonFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5048DBD2C0F962D00134931 /* ButtonFilter.swift */; };
-		A5048DC02C0F963800134931 /* ItineraryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5048DBF2C0F963800134931 /* ItineraryButton.swift */; };
 		A5048DC22C0F964A00134931 /* FilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5048DC12C0F964A00134931 /* FilterModel.swift */; };
 		A5048DC42C0F964F00134931 /* ShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5048DC32C0F964F00134931 /* ShopModel.swift */; };
 		A5048DC72C0F966000134931 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5048DC52C0F966000134931 /* FilterViewModel.swift */; };
@@ -58,7 +57,6 @@
 		709D6BF72C0DB49700F57235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		709D6BFA2C0DB49700F57235 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A5048DBD2C0F962D00134931 /* ButtonFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonFilter.swift; sourceTree = "<group>"; };
-		A5048DBF2C0F963800134931 /* ItineraryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItineraryButton.swift; sourceTree = "<group>"; };
 		A5048DC12C0F964A00134931 /* FilterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterModel.swift; sourceTree = "<group>"; };
 		A5048DC32C0F964F00134931 /* ShopModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopModel.swift; sourceTree = "<group>"; };
 		A5048DC52C0F966000134931 /* FilterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
@@ -153,7 +151,6 @@
 				A59315882C108E970064B3A8 /* ButtonFavorite.swift */,
 				A593158A2C1090990064B3A8 /* ButtonShare.swift */,
 				A5048DBD2C0F962D00134931 /* ButtonFilter.swift */,
-				A5048DBF2C0F963800134931 /* ItineraryButton.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -383,7 +380,6 @@
 				A5048DC42C0F964F00134931 /* ShopModel.swift in Sources */,
 				EAB0877B2C0DF12700A7C28C /* ExplorerFilterModalView.swift in Sources */,
 				EAB087732C0DF08F00A7C28C /* NewsHomeView.swift in Sources */,
-				A5048DC02C0F963800134931 /* ItineraryButton.swift in Sources */,
 				A5048DC82C0F966000134931 /* ShopViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
