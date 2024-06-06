@@ -13,6 +13,9 @@ struct ExplorerListView: View {
     var body: some View {
         NavigationStack {
             List {
+                
+                CustomSearchSuggestionView(viewModel: viewModel)
+                
                 ForEach(viewModel.filteredShops) { shop in
                     VStack(alignment: .leading, spacing: 16.0) {
                         Image(shop.shopImage)
@@ -74,27 +77,32 @@ struct ExplorerListView: View {
                 
             }
             .scrollContentBackground(.hidden)
-        }
-        .searchable(text: $viewModel.searchText) {
-            ForEach(viewModel.filteredShops) { shop in
-                Label(shop.shopName, systemImage: "building.columns.circle.fill")
-                    .searchCompletion(shop)
-            }
-            .searchSuggestions(.hidden, for: .content)
+            .searchable(text: $viewModel.searchText, suggestions: {
+                ForEach(viewModel.filteredSuggestions) { shop in
+                    Text(shop.shopName)
+                        .searchCompletion(shop.shopName)
+                }
+                .searchSuggestions(.hidden, for: .content)
+            })
+            
         }
         
     }
 }
 
 struct CustomSearchSuggestionView: View {
-    @StateObject var viewModel = ShopViewModel()
+    @ObservedObject var viewModel = ShopViewModel()
+    @Environment(\.isSearching) var isSearching
+    @Environment(\.searchSuggestionsPlacement) var placement
+    
     var body: some View {
-        
-        ForEach(viewModel.filteredShops) { shop in
-            Button {
-                viewModel.searchText = shop
-            } label: {
-                Label(shop, systemImage: "building.columns.circle.fill")
+        if isSearching && placement == .content {
+            ForEach(viewModel.filteredSuggestions) { shop in
+                Button {
+                    viewModel.searchText = shop.shopName
+                } label: {
+                    Label(shop.shopName, systemImage: "building.columns.circle.fill")
+                }
             }
         }
     }

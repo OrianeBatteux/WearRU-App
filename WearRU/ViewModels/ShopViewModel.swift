@@ -30,9 +30,14 @@ class ShopViewModel: ObservableObject {
     
     var filteredShops: [Shop] {
         guard !searchText.isEmpty else { return shops}
-        
         return shops.filter { shop in
             shop.shopName.lowercased().contains(searchText.lowercased())
         }
+    }
+    
+    var filteredSuggestions: [Shop] {
+        guard !searchText.isEmpty else { return [] }
+        return shops.sorted { $0.shopName.lowercased() < $1.shopName.lowercased() }
+            .filter { $0.shopName.lowercased().contains(searchText.lowercased()) }
     }
 }
