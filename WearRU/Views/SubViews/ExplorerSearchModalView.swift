@@ -8,11 +8,27 @@
 import SwiftUI
 
 struct ExplorerSearchModalView: View {
+    @Binding var isVisible : Bool
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView(.horizontal) {
+            HStack {
+                Image("CardShop_3")
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                Image("CardShop_3")
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                Image("CardShop_3")
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                Image("CardShop_3")
+                    .resizable()
+                    .frame(width: 100, height: 100)
+            }
+        }
     }
 }
 
 #Preview {
-    ExplorerSearchModalView()
+    ExplorerSearchModalView(isVisible: .constant(false))
 }

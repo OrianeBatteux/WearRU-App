@@ -9,9 +9,8 @@ import SwiftUI
 import MapKit
 
 struct ExplorerMapView: View {
-    @StateObject var viewModel : ShopViewModel = ShopViewModel()
+    @ObservedObject var shopViewModel = ShopViewModel()
     @State private var isOnMapMod : Bool = true
-    
     // Initialise une variable pour la position de départ de la map
     let position = MapCameraPosition.region(
         MKCoordinateRegion (
@@ -24,9 +23,9 @@ struct ExplorerMapView: View {
         if isOnMapMod {
             ZStack {
                 Map(initialPosition: position) {
-                    ForEach(viewModel.shops) { shop in
+                    ForEach(shopViewModel.shops) { shop in
                         Annotation(shop.shopName, coordinate: shop.shopLocation.coordinate) {
-                            PinExView(pinSize: 40, name : shop.shopName)
+                            PinExView(shopForPin: shop, shopViewModel: shopViewModel, pinSize: 40)
                         }
                         .annotationTitles(.hidden)
                     }
@@ -43,10 +42,20 @@ struct ExplorerMapView: View {
                 }
                 .padding()
             }
+//            .onTapGesture {
+//                ForEach(viewModel.shops) { shop in
+//                    shop.isSelected = false
+//                }
+//            }
         } else {
             ZStack {
                 ExplorerListView()
                 VStack {
+                    HStack {
+                        ResearchBarExView()
+                        Spacer()
+                        ShowFilterButtonExView()
+                    }
                     Spacer()
                     SwitchMapListButtonExView(isOnMapMod: $isOnMapMod)
                 }
