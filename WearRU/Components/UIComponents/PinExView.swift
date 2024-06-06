@@ -10,12 +10,14 @@ import SwiftUI
 struct PinExView: View {
     @State var isSelected : Bool = false
     @State var pinSize : Double
+    @State var isVisible : Bool = false
     let selectedScale : Double = 1.5
 //    @State var pinDefaultSize : Double = pinSize
     var name : String
     
     var body: some View {
         Button(action: {
+            isVisible = true
             isSelected.toggle()
             if !isSelected {
                 pinSize /= selectedScale
@@ -53,6 +55,11 @@ struct PinExView: View {
             // Offset du visuel car la hitbox n'est pas correct
             .offset(y: pinSize * 0.3)
         })
+        .sheet(isPresented: $isVisible){
+            
+        } content: {
+            ExplorerShopModalView()
+        }
         .frame(width: pinSize * 1.3, height: pinSize * 2.8)
         // Offset du tout pour remettre l'ensemble au bon endroit
         .offset(y : -pinSize * 0.3)
