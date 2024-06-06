@@ -11,11 +11,10 @@ struct ButtonShare: View {
     var body: some View {
         Button(action: {
             shareModal()
-            print("share content")
         }, label: {
-                Image(systemName: "square.and.arrow.up.circle.fill")
-                    .foregroundStyle(.colorText)
-                    .font(.system(size: 30))
+            Image(systemName: "square.and.arrow.up.circle.fill")
+                .foregroundStyle(.colorText)
+                .font(.system(size: 30))
         })
     }
 }

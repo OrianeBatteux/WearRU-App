@@ -9,67 +9,50 @@ import SwiftUI
 
 struct ExplorerListView: View {
     @StateObject var viewModel = ShopViewModel()//propriété wrapper pour déclarer un objet observable qui est créé et possédé par la vue. Elle crée et gère le cycle de vie de cet objet. Cela signifie que l'objet est instancié lorsque la vue est créée et il est détruit lorsque la vue est détruite. En gros, il garantit que les mises à jour de la ViewModel : Shop déclenchent une mise à jour de la vue ExplorerListView.
+    @State private var isOnMapMod : Bool = true
     var body: some View {
-        HStack {
-            ResearchBarExView()
-            ShowFilterButtonExView()
-        }
-        List {
-            ForEach(viewModel.shops) { shop in
-                VStack(alignment: .leading, spacing: 16.0) {
-                    Image(shop.shopImage)
-                        .resizable()
-                        .frame(width: 350, height: 350)
-                        .clipShape(RoundedRectangle(cornerRadius: 20))
-                    HStack {
-                        ButtonFavorite()
-                        ButtonShare()
-                    }
-                    HStack(alignment: .center) {
-                        Text(shop.shopName)
-                            .font(.system(size: 32)).bold()
-                            .foregroundStyle(.colorText)
-                        Spacer()
-                        Text(shop.shopOpening ? "Ouvert" : "Fermé")
-                            .foregroundStyle(.colorText).bold()
-                        Circle()
-                            .frame(height: 20)
-                            .foregroundStyle(shop.shopOpening ? .green : .red)
-                    }
-                    HStack {
-                        Image(systemName: "mappin.circle.fill")
-                            .foregroundStyle(.colorPrimary)
-                            .font(.title)
-                        
-                        Text(shop.shopLocation.address)
-                            .font(.title2)
-                    }
-                    .foregroundStyle(.colorText)
+        NavigationStack {
+            List {
+                CustomSearchSuggestionView(viewModel: viewModel)
+                ForEach(viewModel.filteredShops) { shop in
+                    ShopCardView(shop: shop)
+                        .background(.colorBackgroundLight)
+                        .cornerRadius(20)
+                        .frame(width: 370, height: 700)
+                        .shadow(radius: 10)
                     
-                    HStack {
-                        Image(systemName: "clock.circle.fill")
-                            .foregroundStyle(.colorPrimary)
-                            .font(.title)
-                        Text(shop.shopHours)
-                            .font(.title2)
-                    }
-                    .foregroundStyle(.colorText)
-                    HStack {
-                        Image(systemName: "phone.circle.fill")
-                            .foregroundStyle(.colorPrimary)
-                            .font(.title)
-                        Text(shop.shopPhone)
-                            .font(.title2)
-                    }
-                    .foregroundStyle(.colorText)
                 }
-                .padding()
+                .listRowSeparator(.hidden, edges: .all)
+                
+            }
+            .listStyle(.plain)
+            .searchable(text: $viewModel.searchText, suggestions: {
+                ForEach(viewModel.filteredSuggestions) { shop in
+                    Text(shop.shopName)
+                        .searchCompletion(shop.shopName)
+                }
+                .searchSuggestions(.hidden, for: .content)
+            })
+            
+        }
+    }
+}
+
+struct CustomSearchSuggestionView: View {
+    @ObservedObject var viewModel = ShopViewModel()
+    @Environment(\.isSearching) var isSearching
+    @Environment(\.searchSuggestionsPlacement) var placement
+    
+    var body: some View {
+        if isSearching && placement == .content {
+            ForEach(viewModel.filteredSuggestions) { shop in
+                Button {
+                    viewModel.searchText = shop.shopName
+                } label: {
+                    Label(shop.shopName, systemImage: "building.columns.circle.fill")
+                }
             }
         }
-        .scrollContentBackground(.hidden)
-//        ButtonSwitch(label: "Maps", icon: "map.circle.fill"){
-//            print("Switch on Map View")
-//        }
     }
 }
 

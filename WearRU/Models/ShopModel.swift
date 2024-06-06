@@ -7,8 +7,9 @@
 
 import Foundation
 import MapKit
+import SwiftUI
 
-class Shop: Identifiable, ObservableObject {
+struct Shop: Identifiable {
     let id : UUID = UUID()
     var shopName: String
     var shopImage: String
@@ -16,22 +17,13 @@ class Shop: Identifiable, ObservableObject {
     var shopHours : String
     var shopPhone : String
     var shopLocation: Location
-    var isSelected : Bool
-    init(shopName: String, shopImage: String, shopOpening: Bool, shopHours: String, shopPhone: String, shopLocation: Location, isSelected: Bool = false) {
-        self.shopName = shopName
-        self.shopImage = shopImage
-        self.shopOpening = shopOpening
-        self.shopHours = shopHours
-        self.shopPhone = shopPhone
-        self.shopLocation = shopLocation
-        self.isSelected = isSelected
-    }
+    var isFavorite: Bool
 }
 
 struct Location: Identifiable {
     let id : UUID = UUID()
     let coordinate : CLLocationCoordinate2D
     var address: String
-}
+    }
 
 //var shops : ShopViewModel = ShopViewModel()
