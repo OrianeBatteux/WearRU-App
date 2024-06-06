@@ -51,11 +51,11 @@ struct ExplorerMapView: View {
             ZStack {
                 ExplorerListView()
                 VStack {
-                    HStack {
-                        ResearchBarExView()
-                        Spacer()
-                        ShowFilterButtonExView()
-                    }
+//                    HStack {
+////                        ResearchBarExView()
+//                        Spacer()
+//                        ShowFilterButtonExView()
+//                    }
                     Spacer()
                     SwitchMapListButtonExView(isOnMapMod: $isOnMapMod)
                 }

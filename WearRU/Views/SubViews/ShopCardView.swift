@@ -76,5 +76,5 @@ struct ShopCardView: View {
 }
 
 #Preview {
-    ShopCardView(shop: Shop(shopName: "Sample_Name", shopImage: "CardShop_1", shopOpening: true, shopHours: "Sample_Name", shopPhone: "Sample_Name", shopLocation: Location(coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0), address: "Sample_Name"), isFavorite: false))
+    ShopCardView(shop: Shop(shopName: "Sample_Name", shopImage: "CardShop_1", shopOpening: true, shopHours: "Sample_Name", shopPhone: "Sample_Name", isFavorite: false, shopLocation: Location(coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0), address: "Sample_Name")))
 }
