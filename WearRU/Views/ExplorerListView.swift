@@ -67,9 +67,9 @@ struct ExplorerListView: View {
             }
         }
         .scrollContentBackground(.hidden)
-        ButtonSwitch(label: "Maps", icon: "map.circle.fill"){
-            print("Switch on Map View")
-        }
+//        ButtonSwitch(label: "Maps", icon: "map.circle.fill"){
+//            print("Switch on Map View")
+//        }
     }
 }
 

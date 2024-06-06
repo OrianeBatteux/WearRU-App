@@ -26,4 +26,9 @@ class ShopViewModel: ObservableObject {
             Shop(shopName: "Glamour Boutique", shopImage: "CardShop_10", shopOpening: false, shopHours: "Lun-Sam: 10:00 – 20:30 \nDim: 10:00 – 19:00", shopPhone: "01 11 22 33 44", shopLocation: Location(coordinate : CLLocationCoordinate2D(latitude: 48.87605392456055, longitude: 2.4807637252807617), address: "Westfield Rosny 2"))
         ]
     }
+    func resetShopViewModel () {
+        for shop in shops {
+            shop.isSelected = false
+        }
+    }
 }
