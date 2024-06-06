@@ -42,8 +42,8 @@ class ShopViewModel: ObservableObject {
     }
     
     func resetShopViewModel () {
-            for shop in shops {
-                shop.isSelected = false
-            }
+        for shop in shops {
+            shop.isSelected = false
         }
+    }
 }

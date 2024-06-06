@@ -143,7 +143,6 @@
 		704E680C2C0DC2E500000B89 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
-				A50E2F862C11BFD9002C81EF /* SearchViews */,
 				E2A00A622C0E0B7600D603FD /* ResearchBarExView.swift */,
 				E2A00A642C0E0C7E00D603FD /* ShowFilterButtonExView.swift */,
 				E2A00A662C0E0CC700D603FD /* SwitchMapListButtonExView.swift */,
@@ -242,13 +241,6 @@
 				707E3BB12C0DEDFD003E8724 /* File3.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		A50E2F862C11BFD9002C81EF /* SearchViews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SearchViews;
 			sourceTree = "<group>";
 		};
 		A593158E2C1098280064B3A8 /* Functions */ = {
