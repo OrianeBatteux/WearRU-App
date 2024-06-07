@@ -255,7 +255,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 709D6BFE2C0DB49700F57235 /* Build configuration list for PBXNativeTarget "WearRU" */;
 			buildPhases = (
-				70E997032C0DE5CD00FC179B /* Swiftlint */,
 				709D6BEA2C0DB49700F57235 /* Sources */,
 				709D6BEB2C0DB49700F57235 /* Frameworks */,
 				709D6BEC2C0DB49700F57235 /* Resources */,
@@ -313,27 +312,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		70E997032C0DE5CD00FC179B /* Swiftlint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = Swiftlint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if command -v swiftlint >/dev/null 2>&1\nthen\n    swiftlint\nelse\n    echo \"warning: `swiftlint` command not found - See https://github.com/realm/SwiftLint#installation for installation instructions.\"\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		709D6BEA2C0DB49700F57235 /* Sources */ = {
