@@ -20,15 +20,16 @@ struct PinExView: View {
         @State var isSelected = shopForPin.isSelected
         
         Button(action: {
-            isVisible = true
             if !isSelected {
                 shopViewModel.resetShopViewModel()
                 shopForPin.isSelected = true
                 pinSize *= selectedScale
+                isVisible = true
             } else {
                 shopViewModel.resetShopViewModel()
                 shopForPin.isSelected = false
                 pinSize /= selectedScale
+                isVisible = false
             }
 //            print(shopViewModel.shops)
 //            print(shopForPin.isSelected)
