@@ -12,6 +12,7 @@ struct SplashView: View {
     @Binding var isActive: Bool
     @State private var isLoading: Bool = false
     var body: some View {
+//Mise en forme du logo
         ZStack {
             Color(.colorBackgroundLight)
                 .ignoresSafeArea()
@@ -27,33 +28,40 @@ struct SplashView: View {
                         .resizable()
                         .frame (width: 200, height: 180)
                 }
+//Effet d'apparition en zoom du logo sur 3 secondes
                 .scaleEffect(scale)
                 .onAppear{
                     withAnimation(.easeIn(duration: 3)) {
                         self.scale = 0.9
                     }
                 }
+//Condition de lancement de l'animation de chargement
                 if isLoading{
+//Mise en forme de l'animation de chargement
                     ProgressView()
                         .frame(height: 100)
                         .progressViewStyle(CircularProgressViewStyle(tint: .accentColor))
                         .scaleEffect(7)
+//Pour corriger bug d'affichage à la fin de l'animation du logo :
+//Affichage d'un rectangle invisible si la condition n'est pas remplie
                 } else {
                     Rectangle()
                         .frame(height: 100)
                         .opacity(0)
                 }
             }
+//Lancement de l'animation de chargement
             .onAppear {
                 loadingCircleSplashView()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-                    withAnimation {
-                        self.isActive = true
-                    }
-                }
+                //                DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                //                    withAnimation {
+                //                        self.isActive = true
+                //                    }
+                //                }
             }
         }
     }
+//Création de la fonction qui va lancer l'animation de chargement (loadingCircleSplashView) et l'effacer après 3 secondes
     func loadingCircleSplashView() {
         isLoading = true
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {

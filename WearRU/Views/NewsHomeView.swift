@@ -14,14 +14,13 @@ struct NewsHomeView: View {
             Color(.colorBackgroundLight)
                 .ignoresSafeArea()
                 .navigationTitle("Actualités")
-                        VStack{
-                            
+                        VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 20){
                             ZStack{
                                 RoundedRectangle(cornerRadius: 30)
                                     .fill(Color.white)
                                     .frame(height: 300,  alignment: Alignment.top)
                                 ScrollView(.horizontal) {
-                                    HStack(spacing: 5){
+                                    HStack(spacing: 130){
                                         CarouselExView(newsTitle: "Coucou", newsImage: "CardShop_1")
                                         CarouselExView(newsTitle: "Coucou", newsImage: "CardShop_2")
                                         CarouselExView(newsTitle: "Coucou", newsImage: "CardShop_3")
@@ -31,7 +30,7 @@ struct NewsHomeView: View {
                                 }
                             }
                             ResearchBarExView()
-                            HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 15){
+                            HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 30){
                                 Text ("Récent")
                                 Text ("Alphabétique")
                                 Text ("Favoris")
@@ -40,7 +39,6 @@ struct NewsHomeView: View {
                                 
                             }
                         }
-                        .padding()
         }
     }
 }
