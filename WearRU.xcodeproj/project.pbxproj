@@ -41,7 +41,6 @@
 		EAB087792C0DF11000A7C28C /* ExplorerShopModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB087782C0DF11000A7C28C /* ExplorerShopModalView.swift */; };
 		EAB0877B2C0DF12700A7C28C /* ExplorerFilterModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB0877A2C0DF12700A7C28C /* ExplorerFilterModalView.swift */; };
 		EAB0877D2C0DF14000A7C28C /* ExplorerSearchModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB0877C2C0DF14000A7C28C /* ExplorerSearchModalView.swift */; };
-		EAB0877F2C0DF15800A7C28C /* ShareModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB0877E2C0DF15800A7C28C /* ShareModalView.swift */; };
 		EAB087812C0DF16B00A7C28C /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB087802C0DF16B00A7C28C /* SplashView.swift */; };
 /* End PBXBuildFile section */
 
@@ -81,7 +80,6 @@
 		EAB087782C0DF11000A7C28C /* ExplorerShopModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerShopModalView.swift; sourceTree = "<group>"; };
 		EAB0877A2C0DF12700A7C28C /* ExplorerFilterModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerFilterModalView.swift; sourceTree = "<group>"; };
 		EAB0877C2C0DF14000A7C28C /* ExplorerSearchModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerSearchModalView.swift; sourceTree = "<group>"; };
-		EAB0877E2C0DF15800A7C28C /* ShareModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareModalView.swift; sourceTree = "<group>"; };
 		EAB087802C0DF16B00A7C28C /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,7 +124,6 @@
 				EAB087782C0DF11000A7C28C /* ExplorerShopModalView.swift */,
 				EAB0877A2C0DF12700A7C28C /* ExplorerFilterModalView.swift */,
 				EAB0877C2C0DF14000A7C28C /* ExplorerSearchModalView.swift */,
-				EAB0877E2C0DF15800A7C28C /* ShareModalView.swift */,
 				A50E2F872C11DBD8002C81EF /* ShopCardView.swift */,
 			);
 			path = SubViews;
@@ -347,7 +344,6 @@
 				E2A00A632C0E0B7600D603FD /* ResearchBarExView.swift in Sources */,
 				E2A00A672C0E0CC700D603FD /* SwitchMapListButtonExView.swift in Sources */,
 				EAB087812C0DF16B00A7C28C /* SplashView.swift in Sources */,
-				EAB0877F2C0DF15800A7C28C /* ShareModalView.swift in Sources */,
 				704E68072C0DC24400000B89 /* ExplorerMapView.swift in Sources */,
 				709D6BF42C0DB49700F57235 /* ContentView.swift in Sources */,
 				704E68002C0DC1D900000B89 /* DatabaseService.swift in Sources */,

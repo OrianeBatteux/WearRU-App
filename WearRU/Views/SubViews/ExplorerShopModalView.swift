@@ -9,11 +9,35 @@ import SwiftUI
 
 struct ExplorerShopModalView: View {
     let opening = false
+    @Binding var isVisible : Bool
+    var height : Double
     var body: some View {
         ZStack{
             Color(.colorBackgroundLight)
                 .ignoresSafeArea()
             VStack(alignment: .leading) {
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        isVisible = false
+                    }, label: {
+                        Image(systemName: "xmark.circle.fill")
+                            .font(.title)
+                            .foregroundColor(.accentColor)
+                    })
+                }
+                HStack {
+                    Button(action: {
+                        print("Add favorite")
+                    }) {
+                        ButtonFavorite()
+                    }
+                    Button(action: {
+                        print("Share content")
+                    }) {
+                        ButtonShare()
+                    }
+                }
                 HStack{
                     Text("Erica Zhou")
                         .font(.system(size: 28)).bold()
@@ -23,7 +47,6 @@ struct ExplorerShopModalView: View {
                     Circle()
                         .frame(height: 20)
                         .foregroundStyle(opening ? .green : .red)
-                    //                    Image(systemName: "xmark.circle")
                 }
                 ScrollView(.horizontal){
                     HStack{
@@ -66,14 +89,11 @@ struct ExplorerShopModalView: View {
                     ElementExView(myText:"Non Genré")
                     ElementExView(myText: "Taille Large")
                 }
-                HStack{
-                    Image(systemName: "square.and.arrow.up")
-                }
             }
             .padding()
             .foregroundStyle(Color("Color-Text"))
         }
-        .presentationDetents([.fraction(0.5)])
+        .presentationDetents([.fraction(0.6)])
     }
 }
 
@@ -91,6 +111,6 @@ struct ElementExView: View{
     }
 }
 #Preview {
-    ExplorerShopModalView()
+    ExplorerShopModalView(isVisible: .constant(true), height : 0.4)
     //    ElementExView()
 }

@@ -27,12 +27,12 @@ struct SplashView: View {
                         .resizable()
                         .frame (width: 200, height: 180)
                 }
-                    .scaleEffect(scale)
-                    .onAppear{
-                        withAnimation(.easeIn(duration: 3)) {
-                            self.scale = 0.9
-                        }
+                .scaleEffect(scale)
+                .onAppear{
+                    withAnimation(.easeIn(duration: 3)) {
+                        self.scale = 0.9
                     }
+                }
                 if isLoading{
                     ProgressView()
                         .frame(height: 100)
