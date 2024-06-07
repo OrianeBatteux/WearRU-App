@@ -10,9 +10,10 @@ import SwiftData
 
 struct ContentView: View {
     var body: some View {
+        //Création de la TabView avec nos différents "onglets" de navigation principaux et leur logo
         TabView {
             NavigationStack {
-                ExplorerMapView()
+                ExplorerMapView() // Ici on appelle l'écran que l'on veut voir
             }
             .tabItem {
                 Text("Explorer")
@@ -20,7 +21,7 @@ struct ContentView: View {
                     .renderingMode(.template)
             }
             NavigationStack {
-                NewsHomeView()
+                NewsHomeView() // Ici on appelle l'écran que l'on veut voir
             }
             .tabItem {
                 Text("Actualités")
