@@ -53,11 +53,11 @@ struct SplashView: View {
 //Lancement de l'animation de chargement
             .onAppear {
                 loadingCircleSplashView()
-                //                DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-                //                    withAnimation {
-                //                        self.isActive = true
-                //                    }
-                //                }
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                                    withAnimation {
+                                        self.isActive = true
+                                    }
+                                }
             }
         }
     }
