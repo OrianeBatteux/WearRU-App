@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ExplorerShopModalView: View {
+    let opening = false
     var body: some View {
         ZStack{
             Color(.colorBackgroundLight)
@@ -15,11 +16,14 @@ struct ExplorerShopModalView: View {
             VStack(alignment: .leading) {
                 HStack{
                     Text("Aushopping Val de Fontenay")
-                        .bold()
-                        Spacer()
-                    Text("Ouvert")
-                        .bold()
-//                    Image(systemName: "xmark.circle")
+                        .font(.system(size: 28)).bold()
+                    Spacer()
+                    Text(opening ? "Ouvert" : "Fermé")
+                        .foregroundStyle(.colorText).bold()
+                    Circle()
+                        .frame(height: 20)
+                        .foregroundStyle(opening ? .green : .red)
+                    //                    Image(systemName: "xmark.circle")
                 }
                 ScrollView(.horizontal){
                     HStack{
@@ -27,18 +31,19 @@ struct ExplorerShopModalView: View {
                             .resizable()
                             .frame(width: 200, height: 150 )
                             .cornerRadius(15)
-//                            .padding()
+                        //                            .padding()
                         Image("CardShop_1")
                             .resizable()
                             .frame(width: 200, height: 150 )
                             .cornerRadius(15)
                     }
                 }
-                    VStack(alignment: .leading){
-                        Text("Horaire: Ouvert · Ferme à 20:00")
-                        Text("Centre commercial Aushopping, 94120 Fontnay-sous-Bois")
-                    }
-                HStack{
+                VStack(alignment: .leading){
+                    Text("Horaire: Ouvert · Ferme à 20:00")
+                    Text("Centre commercial Aushopping, 94120 Fontnay-sous-Bois")
+                }
+                .font(.title3)
+                HStack {
                     ElementExView(myText: "Eco")
                     ElementExView(myText:"Non Genré")
                     ElementExView(myText: "Taille Large")
@@ -60,16 +65,16 @@ struct ExplorerShopModalView: View {
 struct ElementExView: View{
     var myText: String
     var body: some View{
-        ZStack{
-            RoundedRectangle(cornerRadius: 15)
+        ZStack {
+            RoundedRectangle(cornerRadius: 20)
                 .fill(.colorPrimary)
-                .frame(width: 80, height: 30)
+                .frame(width: 100, height: 40)
             Text(myText)
-                .foregroundStyle(Color("Color-Text"))
+                .foregroundColor(.colorBackgroundLight)
         }
     }
 }
 #Preview {
-ExplorerShopModalView()
-//    ElementExView()
+    ExplorerShopModalView()
+    //    ElementExView()
 }

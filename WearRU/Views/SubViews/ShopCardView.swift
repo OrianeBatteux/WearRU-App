@@ -45,7 +45,7 @@ struct ShopCardView: View {
                     .font(.title)
                 
                 Text(shop.shopLocation.address)
-                    .font(.title2)
+                    .font(.title3)
             }
             .foregroundStyle(.colorText)
             
@@ -54,7 +54,7 @@ struct ShopCardView: View {
                     .foregroundStyle(.colorPrimary)
                     .font(.title)
                 Text(shop.shopHours)
-                    .font(.title2)
+                    .font(.title3)
                     .lineLimit(nil)
                     .fixedSize(horizontal: false, vertical: true)
             }
@@ -64,7 +64,7 @@ struct ShopCardView: View {
                     .foregroundStyle(.colorPrimary)
                     .font(.title)
                 Text(shop.shopPhone)
-                    .font(.title2)
+                    .font(.title3)
             }
             .padding(.bottom)
             .foregroundStyle(.colorText)
