@@ -112,7 +112,6 @@
 				EAB087742C0DF0C500A7C28C /* NewsArticleView.swift */,
 				EAB087802C0DF16B00A7C28C /* SplashView.swift */,
 				704E68082C0DC24F00000B89 /* SubViews */,
-				EA2003FD2C1099E4002BE87E /* ViewCoordinator.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -125,6 +124,7 @@
 				EAB0877A2C0DF12700A7C28C /* ExplorerFilterModalView.swift */,
 				EAB0877C2C0DF14000A7C28C /* ExplorerSearchModalView.swift */,
 				A50E2F872C11DBD8002C81EF /* ShopCardView.swift */,
+				EA2003FD2C1099E4002BE87E /* ViewCoordinator.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
