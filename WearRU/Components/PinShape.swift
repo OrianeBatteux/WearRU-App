@@ -7,10 +7,9 @@
 
 import SwiftUI
 
+// Création d'une Shape Custom pour le Pin avec le protocol Shape
 struct PinShape: Shape {
     var pinSize : Double
-//    var primaryColor : Color
-//    var secondaryColor : Color
     
     func path(in rect: CGRect) -> Path {
         Path { path in

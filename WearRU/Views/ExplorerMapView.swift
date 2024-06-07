@@ -20,8 +20,10 @@ struct ExplorerMapView: View {
     )
     
     var body: some View {
+        // Condition qui dit quel mod on veut voir, soit le mod Map
         if isOnMapMod {
             ZStack {
+                // Affichage de la map avec les Pins par dessus en bouclant sur une liste de boutique
                 Map(initialPosition: position) {
                     ForEach(shopViewModel.shops) { shop in
                         Annotation(shop.shopName, coordinate: shop.shopLocation.coordinate) {
@@ -42,12 +44,7 @@ struct ExplorerMapView: View {
                 }
                 .padding()
             }
-            //            .onTapGesture {
-            //                ForEach(viewModel.shops) { shop in
-            //                    shop.isSelected = false
-            //                }
-            //            }
-        } else {
+        } else { // Soit le mode liste
             ZStack {
                 ExplorerListView()
                 VStack {
