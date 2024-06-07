@@ -24,6 +24,8 @@
 		A5048DC82C0F966000134931 /* ShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5048DC62C0F966000134931 /* ShopViewModel.swift */; };
 		A50E2F882C11DBD8002C81EF /* ShopCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E2F872C11DBD8002C81EF /* ShopCardView.swift */; };
 		A51E34142C11FD2900450396 /* CarouselExView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E34132C11FD2900450396 /* CarouselExView.swift */; };
+		A57E37FD2C1309EE00B72A54 /* NewsViewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E37FC2C1309EE00B72A54 /* NewsViewsModel.swift */; };
+		A57E37FF2C1309FF00B72A54 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E37FE2C1309FF00B72A54 /* NewsModel.swift */; };
 		A59315892C108E970064B3A8 /* ButtonFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59315882C108E970064B3A8 /* ButtonFavorite.swift */; };
 		A593158B2C1090990064B3A8 /* ButtonShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = A593158A2C1090990064B3A8 /* ButtonShare.swift */; };
 		A593158D2C1091990064B3A8 /* ShareModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A593158C2C1091990064B3A8 /* ShareModal.swift */; };
@@ -63,6 +65,8 @@
 		A5048DC62C0F966000134931 /* ShopViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewModel.swift; sourceTree = "<group>"; };
 		A50E2F872C11DBD8002C81EF /* ShopCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCardView.swift; sourceTree = "<group>"; };
 		A51E34132C11FD2900450396 /* CarouselExView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselExView.swift; sourceTree = "<group>"; };
+		A57E37FC2C1309EE00B72A54 /* NewsViewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewsModel.swift; sourceTree = "<group>"; };
+		A57E37FE2C1309FF00B72A54 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		A59315882C108E970064B3A8 /* ButtonFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFavorite.swift; sourceTree = "<group>"; };
 		A593158A2C1090990064B3A8 /* ButtonShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonShare.swift; sourceTree = "<group>"; };
 		A593158C2C1091990064B3A8 /* ShareModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareModal.swift; sourceTree = "<group>"; };
@@ -201,6 +205,7 @@
 			children = (
 				A5048DC52C0F966000134931 /* FilterViewModel.swift */,
 				A5048DC62C0F966000134931 /* ShopViewModel.swift */,
+				A57E37FC2C1309EE00B72A54 /* NewsViewsModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 				704E68112C0DC70800000B89 /* User.swift */,
 				A5048DC12C0F964A00134931 /* FilterModel.swift */,
 				A5048DC32C0F964F00134931 /* ShopModel.swift */,
+				A57E37FE2C1309FF00B72A54 /* NewsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -313,6 +319,7 @@
 				A5048DC72C0F966000134931 /* FilterViewModel.swift in Sources */,
 				E2A00A632C0E0B7600D603FD /* ResearchBarExView.swift in Sources */,
 				E2A00A672C0E0CC700D603FD /* SwitchMapListButtonExView.swift in Sources */,
+				A57E37FD2C1309EE00B72A54 /* NewsViewsModel.swift in Sources */,
 				EAB087812C0DF16B00A7C28C /* SplashView.swift in Sources */,
 				704E68072C0DC24400000B89 /* ExplorerMapView.swift in Sources */,
 				709D6BF42C0DB49700F57235 /* ContentView.swift in Sources */,
@@ -323,6 +330,7 @@
 				E23C8CE92C0F12C300AEA272 /* PinExView.swift in Sources */,
 				A50E2F882C11DBD8002C81EF /* ShopCardView.swift in Sources */,
 				A5048DC22C0F964A00134931 /* FilterModel.swift in Sources */,
+				A57E37FF2C1309FF00B72A54 /* NewsModel.swift in Sources */,
 				A593158B2C1090990064B3A8 /* ButtonShare.swift in Sources */,
 				E23C8CEB2C0F5AA100AEA272 /* FilterListExView.swift in Sources */,
 				EA2003FE2C1099E4002BE87E /* ViewCoordinator.swift in Sources */,
