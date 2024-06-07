@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import SwiftData
+//import SwiftData
 
 struct ContentView: View {
     var body: some View {
@@ -27,7 +27,7 @@ struct ContentView: View {
                 Image(systemName: "newspaper")
                     .renderingMode(.template)
             }
-                
+            
         }
     }
 }
