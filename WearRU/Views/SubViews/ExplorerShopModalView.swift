@@ -15,6 +15,11 @@ struct ExplorerShopModalView: View {
         ZStack{
             Color(.colorBackgroundLight)
                 .ignoresSafeArea()
+            VStack {
+                RoundedRectangle(cornerRadius: 15)
+                    .frame(width: 80, height: 10)
+                    .opacity(0.2)
+            }
             VStack(alignment: .leading) {
                 HStack {
                     Spacer()
@@ -90,10 +95,12 @@ struct ExplorerShopModalView: View {
                     ElementExView(myText: "Taille Large")
                 }
             }
+            .lineLimit(nil)
+            .fixedSize(horizontal: false, vertical: true)
             .padding()
             .foregroundStyle(Color("Color-Text"))
         }
-        .presentationDetents([.fraction(0.6)])
+        .presentationDetents([.fraction(0.65)])
     }
 }
 
