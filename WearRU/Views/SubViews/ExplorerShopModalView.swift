@@ -15,7 +15,7 @@ struct ExplorerShopModalView: View {
                 .ignoresSafeArea()
             VStack(alignment: .leading) {
                 HStack{
-                    Text("Aushopping Val de Fontenay")
+                    Text("Erica Zhou")
                         .font(.system(size: 28)).bold()
                     Spacer()
                     Text(opening ? "Ouvert" : "Fermé")
@@ -27,22 +27,40 @@ struct ExplorerShopModalView: View {
                 }
                 ScrollView(.horizontal){
                     HStack{
-                        Image("CardShop_3")
+                        Image("CardShop_1")
                             .resizable()
                             .frame(width: 200, height: 150 )
                             .cornerRadius(15)
                         //                            .padding()
-                        Image("CardShop_1")
+                        Image("CardShop_1_2")
                             .resizable()
                             .frame(width: 200, height: 150 )
                             .cornerRadius(15)
                     }
                 }
                 VStack(alignment: .leading){
-                    Text("Horaire: Ouvert · Ferme à 20:00")
-                    Text("Centre commercial Aushopping, 94120 Fontnay-sous-Bois")
+                    HStack {
+                        Image(systemName: "mappin.circle.fill")
+                            .foregroundStyle(.colorPrimary)
+                            .font(.title)
+                        Text("Westfield Rosny 2")
+                            .font(.title3)
+                    }
+                    HStack {
+                        Image(systemName: "clock.circle.fill")
+                            .foregroundStyle(.colorPrimary)
+                            .font(.title)
+                        Text("Lun-Sam: 10:00 – 20:30 \nDim: 10:00 – 19:00")
+                            .font(.title3)
+                    }
+                    HStack {
+                        Image(systemName: "phone.circle.fill")
+                            .foregroundStyle(.colorPrimary)
+                            .font(.title)
+                        Text("01 23 45 67 89")
+                            .font(.title3)
+                    }
                 }
-                .font(.title3)
                 HStack {
                     ElementExView(myText: "Eco")
                     ElementExView(myText:"Non Genré")
@@ -58,8 +76,6 @@ struct ExplorerShopModalView: View {
         .presentationDetents([.fraction(0.5)])
     }
 }
-
-
 
 
 struct ElementExView: View{

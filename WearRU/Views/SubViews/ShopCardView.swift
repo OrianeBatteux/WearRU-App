@@ -68,6 +68,11 @@ struct ShopCardView: View {
             }
             .padding(.bottom)
             .foregroundStyle(.colorText)
+            HStack {
+                ElementExView(myText: "Eco")
+                ElementExView(myText:"Non Genré")
+                ElementExView(myText: "Taille Large")
+            }
         }
         .lineLimit(nil)
         .fixedSize(horizontal: false, vertical: true)

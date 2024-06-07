@@ -42,20 +42,15 @@ struct ExplorerMapView: View {
                 }
                 .padding()
             }
-//            .onTapGesture {
-//                ForEach(viewModel.shops) { shop in
-//                    shop.isSelected = false
-//                }
-//            }
+            //            .onTapGesture {
+            //                ForEach(viewModel.shops) { shop in
+            //                    shop.isSelected = false
+            //                }
+            //            }
         } else {
             ZStack {
                 ExplorerListView()
                 VStack {
-//                    HStack {
-////                        ResearchBarExView()
-//                        Spacer()
-//                        ShowFilterButtonExView()
-//                    }
                     Spacer()
                     SwitchMapListButtonExView(isOnMapMod: $isOnMapMod)
                 }
