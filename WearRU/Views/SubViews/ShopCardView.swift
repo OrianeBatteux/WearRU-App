@@ -9,7 +9,7 @@ import SwiftUI
 import MapKit
 
 struct ShopCardView: View {
-    let shop: Shop
+    @ObservedObject var shop: Shop
     var body: some View {
         VStack(alignment: .leading, spacing: 10.0) {
             Image(shop.shopImage)
@@ -63,7 +63,7 @@ struct ShopCardView: View {
                 Image(systemName: "phone.circle.fill")
                     .foregroundStyle(.colorPrimary)
                     .font(.title)
-                Text(shop.shopPhone)
+                Link(shop.shopPhone, destination: URL(string: "tel:\(shop.shopPhone)")!)
                     .font(.title3)
             }
             .padding(.bottom)

@@ -12,6 +12,7 @@
 		704E68072C0DC24400000B89 /* ExplorerMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704E68062C0DC24400000B89 /* ExplorerMapView.swift */; };
 		704E680F2C0DC4C200000B89 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704E680E2C0DC4C200000B89 /* Color+Extensions.swift */; };
 		704E68122C0DC70800000B89 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704E68112C0DC70800000B89 /* User.swift */; };
+		70680DA02C1C7AE000C8FC3F /* CarrousselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70680D9F2C1C7AE000C8FC3F /* CarrousselView.swift */; };
 		707E3BB22C0DEDFD003E8724 /* File3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E3BB12C0DEDFD003E8724 /* File3.swift */; };
 		709D6BF22C0DB49700F57235 /* WearRUApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D6BF12C0DB49700F57235 /* WearRUApp.swift */; };
 		709D6BF42C0DB49700F57235 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D6BF32C0DB49700F57235 /* ContentView.swift */; };
@@ -52,6 +53,8 @@
 		704E68062C0DC24400000B89 /* ExplorerMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerMapView.swift; sourceTree = "<group>"; };
 		704E680E2C0DC4C200000B89 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		704E68112C0DC70800000B89 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		70680D9C2C1C75A000C8FC3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70680D9F2C1C7AE000C8FC3F /* CarrousselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrousselView.swift; sourceTree = "<group>"; };
 		707E3BB12C0DEDFD003E8724 /* File3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File3.swift; sourceTree = "<group>"; };
 		709D6BEE2C0DB49700F57235 /* WearRU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WearRU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		709D6BF12C0DB49700F57235 /* WearRUApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WearRUApp.swift; sourceTree = "<group>"; };
@@ -129,6 +132,7 @@
 				EAB0877C2C0DF14000A7C28C /* ExplorerSearchModalView.swift */,
 				A50E2F872C11DBD8002C81EF /* ShopCardView.swift */,
 				EA2003FD2C1099E4002BE87E /* ViewCoordinator.swift */,
+				70680D9F2C1C7AE000C8FC3F /* CarrousselView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -177,6 +181,7 @@
 		709D6BF02C0DB49700F57235 /* WearRU */ = {
 			isa = PBXGroup;
 			children = (
+				70680D9C2C1C75A000C8FC3F /* Info.plist */,
 				709D6BF12C0DB49700F57235 /* WearRUApp.swift */,
 				709D6BF32C0DB49700F57235 /* ContentView.swift */,
 				704E68052C0DC22A00000B89 /* Views */,
@@ -329,6 +334,7 @@
 				704E680F2C0DC4C200000B89 /* Color+Extensions.swift in Sources */,
 				E23C8CE92C0F12C300AEA272 /* PinExView.swift in Sources */,
 				A50E2F882C11DBD8002C81EF /* ShopCardView.swift in Sources */,
+				70680DA02C1C7AE000C8FC3F /* CarrousselView.swift in Sources */,
 				A5048DC22C0F964A00134931 /* FilterModel.swift in Sources */,
 				A57E37FF2C1309FF00B72A54 /* NewsModel.swift in Sources */,
 				A593158B2C1090990064B3A8 /* ButtonShare.swift in Sources */,
@@ -487,8 +493,10 @@
 				DEVELOPMENT_TEAM = U6NY5CL9BJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WearRU/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WearRU;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We want to access to your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -519,8 +527,10 @@
 				DEVELOPMENT_TEAM = U6NY5CL9BJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WearRU/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WearRU;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We want to access to your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

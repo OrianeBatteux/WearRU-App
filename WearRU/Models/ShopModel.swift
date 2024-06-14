@@ -28,7 +28,7 @@ class Shop: Identifiable, ObservableObject {
     var shopOpening : Bool
     var shopHours : String
     var shopPhone : String
-    var isFavorite: Bool
+    @Published var isFavorite: Bool
     var shopLocation: Location
     var isSelected : Bool
     init(shopName: String, shopImage: String, shopOpening: Bool, shopHours: String, shopPhone: String, isFavorite: Bool, shopLocation: Location, isSelected: Bool = false) {
