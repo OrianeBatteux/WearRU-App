@@ -9,28 +9,45 @@ import Foundation
 import MapKit
 import SwiftUI
 
-//struct Shop: Identifiable {
-//    let id : UUID = UUID()
-//    var shopName: String
-//    var shopImage: String
-//    var shopOpening : Bool
-//    var shopHours : String
-//    var shopPhone : String
-//    var shopLocation: Location
-//    var isFavorite: Bool
-//    var isSelected : Bool
-//}
+/**
+ Documentation de la classe Shop.
+ Cette classe représente un magasin avec des fonctionnalités spécifiques. Elle est identifiable et peut-être observé.
+ */
 
 class Shop: Identifiable, ObservableObject {
+    ///
     let id : UUID = UUID()
+    ///Nom du magasin
     var shopName: String
+    ///Image du magasin
     var shopImage: String
+    ///Si le le magasin est ouvert ou fermé
     var shopOpening : Bool
+    ///Les jours et horaires du magasin
     var shopHours : String
+    ///Numéro de téléphone du magasin
     var shopPhone : String
+    ///Si le magasin est en marqué en favoris ou non
     @Published var isFavorite: Bool
+    ///Localisation du magasin
     var shopLocation: Location
+    ///Si le magasin est sélectionné
     var isSelected : Bool
+    
+    /**
+     Initialise une instance de 'Shop' avec des valeurs spécifiques.
+     
+     - Parameters:
+     - shopName: Le nom du magasin
+     - shopImage: L'image du magasin
+     - shopOpening: Magasin Ouvert ou Fermé
+     - shopHours: Jours et horaires d'ouverture
+     - shopPhone: Le numéro de téléphone du magasin
+     - isFavorite: Le magasin en favoris
+     - shopLocation: La localisation du magasin
+     - isSelected: Le magasin sélectionné
+     */
+    
     init(shopName: String, shopImage: String, shopOpening: Bool, shopHours: String, shopPhone: String, isFavorite: Bool, shopLocation: Location, isSelected: Bool = false) {
         self.shopName = shopName
         self.shopImage = shopImage
@@ -49,4 +66,3 @@ struct Location: Identifiable {
     var address: String
 }
 
-//var shops : ShopViewModel = ShopViewModel()
