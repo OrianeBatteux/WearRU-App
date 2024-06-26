@@ -36,7 +36,7 @@ Nous remercions toutes les personnes qui prennent le temps de signaler les vuln�
 
 ## Contact
 
-Pour toute question relative à la sécurité, veuillez nous contacter à [votre-email@example.com](mailto:votre-email@example.com).
+Pour toute question relative à la sécurité, veuillez nous contacter à [johan.quille@protojo.fr](mailto:johan.quille@protojo.fr).
 
 ---
 
