@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct NewsTagView: View {
-    var newsName: String
-    var newsImage: String
     var newsTitle: String
+    var newsImage: String
     var newsWebName: String
     var newsDate: String
     var isFavorite: Favorite
@@ -27,25 +26,27 @@ struct NewsTagView: View {
             HStack{
                 Image(newsImage)
                     .resizable()
-                    .frame(width: 120, height: 120)
+                    .frame(width: 100, height: 100)
                     .cornerRadius(25)
-                    .containerRelativeFrame(.horizontal, count: 3, spacing: 15)
+
                 VStack{
                     Text(newsWebName)
-                        .foregroundColor(Color("Color-Text"))
+                            .foregroundColor(Color("Color-Text"))
                         .bold()
                     Text(newsTitle)
                         .foregroundColor(Color("Color-Text"))
                         .bold()
+                    Spacer()
                     Text(newsDate)
                         .foregroundColor(Color("Color-Text"))
                         .bold()
-                }
+                }.frame(width: 120, height: 120)
+                ButtonFavorite()
             }
         }
     }
 }
 
 #Preview {
-    NewsTagView(newsName: "cfdutzefd", newsImage: "CardShop_9", newsTitle: "cxjgefd", newsWebName: "yefc", newsDate: "vshjdf", isFavorite: Favorite(isFavorite: true))
+    NewsTagView(newsTitle: "Mode inclusive : en finir avec le mythe de l'offre et la demande", newsImage: "CardShop_9", newsWebName: "assiakara.com", newsDate: "16 Août 2023", isFavorite: Favorite(isFavorite: true))
 }
