@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+/**
+Documentation de la structure NewsSearchModalView.
+Elle est conforme au Protocol View.
+*/
+
 struct NewsSearchModalView: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)

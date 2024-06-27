@@ -7,8 +7,15 @@
 
 import SwiftUI
 
+/**
+Documentation de la structure ButtonFilter.
+Cette structure affiche un bouton de filtre. Elle est conforme au Protocol View.
+*/
+
 struct ButtonFilter: View {
+    ///Etat du bouton
     @State var isFilterTapped = false
+    ///Texte du bouton
     let buttonText : String
     
     var body: some View {

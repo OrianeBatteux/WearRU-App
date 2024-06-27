@@ -7,7 +7,13 @@
 
 import SwiftUI
 
+/**
+Documentation de la structure SwitchMapListButtonExView.
+Cette structure affiche un bouton qui switch l'affichage de ExplorerMapView() si pressé. Elle est conforme au Protocol View.
+*/
+
 struct SwitchMapListButtonExView: View {
+    ///Définit le mod d'affichage à choisir
     @Binding var isOnMapMod : Bool
     var body: some View {
         Button(action: {

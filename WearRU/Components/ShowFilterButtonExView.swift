@@ -7,7 +7,13 @@
 
 import SwiftUI
 
+/**
+Documentation de la structure ShowFilterButtonExView.
+Cette structure affiche un bouton qui ouvre une modal ExplorerFilterModalView() si pressé. Elle est conforme au Protocol View.
+*/
+
 struct ShowFilterButtonExView: View {
+    ///Etat de l'affichage de la modal
     @State private var isVisible : Bool = false
     
     var body: some View {

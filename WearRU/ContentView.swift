@@ -6,14 +6,17 @@
 //
 
 import SwiftUI
-//import SwiftData
+
+/**
+Documentation de la structure ContentView.
+Cette structure affiche nos écrans avec la TabView. Elle est conforme au Protocol View.
+*/
 
 struct ContentView: View {
     var body: some View {
-        //Création de la TabView avec nos différents "onglets" de navigation principaux et leur logo
         TabView {
             NavigationStack {
-                ExplorerMapView() // Ici on appelle l'écran que l'on veut voir
+                ExplorerMapView()
             }
             .tabItem {
                 Text("Explorer")
@@ -21,14 +24,13 @@ struct ContentView: View {
                     .renderingMode(.template)
             }
             NavigationStack {
-                NewsHomeView() // Ici on appelle l'écran que l'on veut voir
+                NewsHomeView()
             }
             .tabItem {
                 Text("Actualités")
                 Image(systemName: "newspaper")
                     .renderingMode(.template)
             }
-            
         }
     }
 }
