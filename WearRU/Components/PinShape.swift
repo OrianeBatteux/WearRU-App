@@ -7,8 +7,13 @@
 
 import SwiftUI
 
-// Création d'une Shape Custom pour le Pin avec le protocol Shape
+/**
+ Documentation de la structure PinShape.
+ Cette structure crée une shape custom PinShape. Elle adopte le protocole Shape.
+ */
+
 struct PinShape: Shape {
+    ///Taille du Pin
     var pinSize : Double
     
     func path(in rect: CGRect) -> Path {
