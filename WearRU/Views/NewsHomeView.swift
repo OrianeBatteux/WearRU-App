@@ -8,9 +8,39 @@
 import SwiftUI
 
 struct NewsHomeView: View {
-    @StateObject var viewModel = ShopViewModel()
     var body: some View {
-            CarrousselView()
+
+        ZStack{
+            Color(.colorBackgroundLight)
+                .ignoresSafeArea()
+                .navigationTitle("Actualités")
+            VStack(alignment: .center, spacing: 20){
+                ZStack{
+                    RoundedRectangle(cornerRadius: 30)
+                        .fill(Color.white)
+                        .frame(width: 350, height: 300,  alignment: Alignment.top)
+                    ScrollView(.horizontal) {
+                        HStack(spacing: 230){
+                            CarouselExView(newsTitle: "Coucou", newsImage: "CardShop_1")
+                            CarouselExView(newsTitle: "Coucou", newsImage: "CardShop_2")
+                            CarouselExView(newsTitle: "Coucou", newsImage: "CardShop_3")
+                            CarouselExView(newsTitle: "Coucou", newsImage: "CardShop_4")
+                            CarouselExView(newsTitle: "Coucou", newsImage: "CardShop_5")
+                        }
+                    }
+                }
+                ResearchBarExView()
+                HStack(alignment: .center, spacing: 30){
+                    Text ("Récent")
+                    Text ("Alphabétique")
+                    Text ("Favoris")
+                }
+                ScrollView(.vertical) {
+
+                }
+            }
+            .padding()
+        }
     }
 }
 #Preview {

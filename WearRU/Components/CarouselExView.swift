@@ -14,8 +14,8 @@ struct CarouselExView: View {
         VStack(spacing: 10) {
             Image(newsImage)
                 .resizable()
-                .frame(width: 220, height: 200)
-                .cornerRadius(15)
+                .frame(width: 320, height: 200)
+                .cornerRadius(25)
                 .containerRelativeFrame(.horizontal, count: 3, spacing: 15)
             Text(newsTitle)
                 .foregroundColor(Color("Color-Text"))

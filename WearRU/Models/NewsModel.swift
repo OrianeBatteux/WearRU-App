@@ -7,12 +7,21 @@
 
 import Foundation
 
-struct News: Identifiable {
+class News: Identifiable, ObservableObject {
     let id : UUID = UUID()
     var NewsName: String
-    var NewsImage: String
+    var NewsImage: String // Tableau
     var NewsWebName: String
     var NewsUrl : String
     var NewsDate : String
-    var isFavorite: Bool
+    var isFavorite: Favorite
+
+    init(NewsName: String, NewsImage: String, NewsWebName: String, NewsUrl: String, NewsDate: String, isFavorite: Favorite) {
+        self.NewsName = NewsName
+        self.NewsImage = NewsImage
+        self.NewsWebName = NewsWebName
+        self.NewsUrl = NewsUrl
+        self.NewsDate = NewsDate
+        self.isFavorite = isFavorite
+    }
 }
