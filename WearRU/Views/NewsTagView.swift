@@ -7,11 +7,18 @@
 
 import SwiftUI
 
+/** Vue de la vignette qui sera reproduite sous forme de liste
+ */
 struct NewsTagView: View {
+    /// Le titre de la news
     var newsTitle: String
+    /// L'image de la news
     var newsImage: String
+    /// Le nom du site qui publie la news
     var newsWebName: String
+    /// La date  de publication de la news
     var newsDate: String
+    /// Si la news est favorite
     var isFavorite: Favorite
 
 

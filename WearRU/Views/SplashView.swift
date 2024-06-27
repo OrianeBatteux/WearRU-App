@@ -7,12 +7,18 @@
 
 import SwiftUI
 
+/**
+ Vue du splash screen qui lance une animation du logo de l'appli en zoom avant ainsi qu'une animation de chanrgement circulaire sur 3 secondes, puis bascule vers la vue ContentView
+ */
+
 struct SplashView: View {
+    /// La taille d'initialisation du logo
     @State private var scale = 0.7
+    /// Si la vue SlashView est active
     @Binding var isActive: Bool
+    /// Si le le logo de chargement est actif
     @State private var isLoading: Bool = false
     var body: some View {
-//Mise en forme du logo
         ZStack {
             Color(.colorBackgroundLight)
                 .ignoresSafeArea()
@@ -28,29 +34,23 @@ struct SplashView: View {
                         .resizable()
                         .frame (width: 200, height: 180)
                 }
-//Effet d'apparition en zoom du logo sur 3 secondes
                 .scaleEffect(scale)
                 .onAppear{
                     withAnimation(.easeIn(duration: 3)) {
                         self.scale = 0.9
                     }
                 }
-//Condition de lancement de l'animation de chargement
                 if isLoading{
-//Mise en forme de l'animation de chargement
                     ProgressView()
                         .frame(height: 100)
                         .progressViewStyle(CircularProgressViewStyle(tint: .accentColor))
                         .scaleEffect(7)
-//Pour corriger bug d'affichage à la fin de l'animation du logo :
-//Affichage d'un rectangle invisible si la condition n'est pas remplie
                 } else {
                     Rectangle()
                         .frame(height: 100)
                         .opacity(0)
                 }
             }
-//Lancement de l'animation de chargement
             .onAppear {
                 loadingCircleSplashView()
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
@@ -61,7 +61,7 @@ struct SplashView: View {
             }
         }
     }
-//Création de la fonction qui va lancer l'animation de chargement (loadingCircleSplashView) et l'effacer après 3 secondes
+///Création de la fonction qui va lancer l'animation de chargement (loadingCircleSplashView) et l'effacer après 3 secondes
     func loadingCircleSplashView() {
         isLoading = true
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {

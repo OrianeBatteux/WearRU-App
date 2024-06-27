@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+/**
+ La vue du bouton favoris
+ */
 struct ButtonFavorite: View {
     @State var isFavorite = false
     var body: some View {
