@@ -7,8 +7,13 @@
 
 import SwiftUI
 
+/**
+ La vue de la vignette avec l'image et le titre de la news dans le carrousel
+ */
 struct CarouselExView: View {
+    /// Le  titre de la news
     var newsTitle: String
+    /// L'image de la news
     var newsImage: String
     var body: some View {
         VStack(spacing: 10) {

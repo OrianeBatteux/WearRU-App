@@ -7,6 +7,9 @@
 
 import Foundation
 
+/**
+ Tableau de creation des objets news
+ */
 class NewsViewModel: ObservableObject {
     @Published var news: [News] = []
     init() {
