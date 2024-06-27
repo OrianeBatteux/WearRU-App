@@ -7,9 +7,17 @@
 
 import SwiftUI
 
+/**
+Documentation de la structure ExplorerFilterModalView
+Cette structure affiche les filtres à appliquer sur ExplorerMapView. Elle est conforme au Protocol View
+*/
+
 struct ExplorerFilterModalView: View {
+    ///Array de tout nos Filter, iniatiailisé dans FilterViewModel()
     @StateObject var filterViewModel : FilterViewModel = FilterViewModel()
+    ///Etat de l'affichage de la modal
     @Binding var isVisible : Bool
+    ///Hauteur de "dépliage" de la modal
     var height : Double
 
     var body: some View {

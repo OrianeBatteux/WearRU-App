@@ -8,10 +8,19 @@
 import SwiftUI
 import MapKit
 
+/**
+Documentation de la structure PinExView.
+Cette structure affiche un Pin avec un affichage différent d'un Pin à l'autre. Elle est conforme au Protocol View.
+*/
+
 struct PinExView: View {
+    ///Object Shop utiliser pour l'affichage
     @ObservedObject var shopForPin: Shop
+    ///Array de Shop
     @ObservedObject var shopViewModel : ShopViewModel
+    ///Etat de l'affichage de la modal
     @State var isVisible : Bool = false
+    ///Taille du Pin
     @State var pinSize : Double
     
     var body: some View {
@@ -31,8 +40,6 @@ struct PinExView: View {
                 pinSize /= selectedScale
                 isVisible = false
             }
-//            print(shopViewModel.shops)
-//            print(shopForPin.isSelected)
         }, label: {
             ZStack {
                 Ellipse()
