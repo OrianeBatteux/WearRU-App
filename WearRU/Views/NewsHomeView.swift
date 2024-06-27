@@ -7,9 +7,9 @@
 
 import SwiftUI
 
+
 struct NewsHomeView: View {
     var body: some View {
-
         ZStack{
             Color(.colorBackgroundLight)
                 .ignoresSafeArea()
@@ -36,7 +36,7 @@ struct NewsHomeView: View {
                     Text ("Favoris")
                 }
                 ScrollView(.vertical) {
-
+                    
                 }
             }
             .padding()

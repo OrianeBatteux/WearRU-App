@@ -7,7 +7,6 @@
 
 import SwiftUI
 import MapKit
-
 struct ExplorerShopModalView: View {
     var selectedShop : Shop
     let opening = false
@@ -88,7 +87,7 @@ struct ExplorerShopModalView: View {
                             Image(systemName: "clock.circle.fill")
                                 .foregroundStyle(.colorPrimary)
                                 .font(.title)
-                            Text(selectedShop.shopHours)
+                            Text(selectedShop.shopHours.hoursDisplay(of: "friday"))
                                 .font(.title3)
                         }
                         HStack {
@@ -129,5 +128,6 @@ struct ElementExView: View{
     }
 }
 #Preview {
-    ExplorerShopModalView(selectedShop: Shop(shopName: "Erica Zhou", shopImage: ["CardShop_1", "CardShop_2"], shopOpening: true, shopHours: "Lun-Sam: 10:00 – 20:30 \nDim: 10:00 – 19:00", shopPhone: "01 23 45 67 89", isFavorite: false, shopLocation: Location(coordinate : CLLocationCoordinate2D(latitude: 48.88105392456055, longitude: 2.4767637252807617), address: "Westfield Rosny 2")), isVisible: .constant(true), height : 0.4)
+    ExplorerShopModalView(selectedShop: Shop(shopName: "Erica Zhou", shopImage: ["CardShop_1", "CardShop_1"], shopOpening: true, shopHours: WeekHours(monday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), tuesday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), wednesday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), thursday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), friday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), saturday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), sunday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00")), shopPhone: "01 23 45 67 89", isFavorite: Favorite(isFavorite: false), shopLocation: Location(coordinate : CLLocationCoordinate2D(latitude: 48.88105392456055, longitude: 2.4767637252807617), address: "Westfield Rosny 2")), isVisible: .constant(true), height : 0.4)
 }
+
