@@ -8,8 +8,29 @@
 import Foundation
 import MapKit
 
+/**
+ Documentation de la classe ShopViewModel.
+ Cette classe représente une liste de magasins avec des initialisateurs spécifiques. Elle peut-être observé.
+ */
+
 class ShopViewModel: ObservableObject {
     @Published var shops: [Shop] = []
+    ///Instance de la class Shop en tableau
+    
+    /**
+     Initialise une instance de 'Shop' sous forme de tableau avec des valeurs spécifiques.
+     
+     - Parameters:
+     - shopName: Le nom du magasin
+     - shopImage: L'image du magasin
+     - shopOpening: Magasin Ouvert ou Fermé
+     - shopHours: Jours et horaires d'ouverture
+     - shopPhone: Le numéro de téléphone du magasin
+     - isFavorite: Le magasin en favoris
+     - shopLocation: La localisation du magasin
+     - isSelected: Le magasin sélectionné
+     */
+    
     init() {
         shops = [
             Shop(shopName: "Erica Zhou", shopImage: ["CardShop_1"], shopOpening: true, shopHours: WeekHours(monday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), tuesday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), wednesday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), thursday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), friday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), saturday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), sunday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00")), shopPhone: "01 23 45 67 89", isFavorite: Favorite(isFavorite: false), shopLocation: Location(coordinate : CLLocationCoordinate2D(latitude: 48.88105392456055, longitude: 2.4767637252807617), address: "Westfield Rosny 2")),
@@ -24,19 +45,41 @@ class ShopViewModel: ObservableObject {
             Shop(shopName: "Glamour Boutique", shopImage: ["CardShop_10"], shopOpening: false, shopHours: WeekHours(monday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), tuesday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), wednesday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), thursday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), friday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), saturday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), sunday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00")), shopPhone: "01 11 22 33 44", isFavorite: Favorite(isFavorite: false), shopLocation: Location(coordinate : CLLocationCoordinate2D(latitude: 48.87605392456055, longitude: 2.4807637252807617), address: "Westfield Rosny 2"), isSelected: false)
         ]
     }
+    
+    
     @Published var searchText: String = ""
+    ///Stocke le texte de recherche saisi par l’utilisateur. Par défaut, le texte de recherche est vide jusqu’à ce que l’utilisateur saisisse quelque chose.
     
     var filteredShops: [Shop] {
+        /**
+         Une propriété calculée qui retourne un tableau de Shop filtré.
+         */
         guard !searchText.isEmpty else { return shops}
+        /**
+         Vérifie si searchText est vide.
+         - Si searchText est vide, retourne la liste complète des magasins (shops).
+         */
         return shops.filter { shop in
             shop.shopName.lowercased().contains(searchText.lowercased())
+            /**
+             Filtre la liste des magasins (shops).
+             - Pour chaque shop dans shops, vérifie si shop.shopName contient searchText, en ignorant la casse (en utilisant lowercased()).
+             */
+            
         }
     }
     
     var filteredSuggestions: [Shop] {
+        ///Une propriété calculée qui retourne un tableau de Shop filtré et trié.
         guard !searchText.isEmpty else { return [] }
+        /**
+         Vérifie si searchText est vide.
+         - Si searchText est vide, retourne un tableau vide.
+         */
         return shops.sorted { $0.shopName.lowercased() < $1.shopName.lowercased() }
+        ///Trie la liste des magasins (shops) par ordre alphabétique croissant de leur nom (shopName), en ignorant la casse.
             .filter { $0.shopName.lowercased().contains(searchText.lowercased()) }
+        ///Filtre la liste des magasins triés pour inclure seulement ceux dont le nom (shopName) contient searchText, en ignorant la casse.
     }
     
     func resetShopViewModel () {
