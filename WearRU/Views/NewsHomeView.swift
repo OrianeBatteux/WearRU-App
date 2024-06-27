@@ -7,9 +7,15 @@
 
 import SwiftUI
 
+/**
+ Vue qui propose un carroussel avec image et titre des news,
+ Une barre de recherche dans les news
+ Un menu avec 3 systèmes de tri différents des listes de news par vignettes NewsTagView
+ */
 
 struct NewsHomeView: View {
     var body: some View {
+
         ZStack{
             Color(.colorBackgroundLight)
                 .ignoresSafeArea()
@@ -36,7 +42,7 @@ struct NewsHomeView: View {
                     Text ("Favoris")
                 }
                 ScrollView(.vertical) {
-                    
+
                 }
             }
             .padding()
