@@ -7,7 +7,14 @@
 
 import Foundation
 
+/**
+ Documentation de la structure Favorite.
+ 
+ Cette structure représente le caractère favoris dans ShopModel et NewsModel.
+ */
 struct Favorite: Identifiable{
+    ///
     var id = UUID()
+    /// Si l'élément est favoris
     var isFavorite: Bool
 }

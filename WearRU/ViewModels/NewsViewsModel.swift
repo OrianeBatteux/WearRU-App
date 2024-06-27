@@ -11,10 +11,10 @@ class NewsViewModel: ObservableObject {
     @Published var news: [News] = []
     init() {
         news = [
-            News(NewsName: "Mode inclusive : en finir avec le mythe de l'offre et la demande", NewsImage: "CardShop_1", NewsWebName: "assiakara.com", NewsUrl: "https://assiakara.com/fr-fr/blogs/le-blog-dassia/mode-inclusive-en-finir-avec-le-mythe-de-l-offre-et-la-demande", NewsDate: "16 Août 2023", isFavorite: Favorite(isFavorite: true)),
-            News(NewsName: "LA MODE INCLUSIVE : PRINCIPES ET DÉFIS", NewsImage: "CardShop_1", NewsWebName: "modames.com", NewsUrl: "https://www.modames.com/blog-mode-ethique/mode-inclusive", NewsDate: "13 Mai 2024", isFavorite: Favorite(isFavorite: false)),
-            News(NewsName: "17 marques inclusives à connaître", NewsImage: "CardShop_1", NewsWebName: "vogue.fr", NewsUrl: "https://www.vogue.fr/article/guide-marques-inclusives", NewsDate: "21 Avril 2023", isFavorite: Favorite(isFavorite: true)),
-            News(NewsName: "Mode et handicap : l'Institut de la Mode Inclusive dévoile de nouveaux projets", NewsImage: "CardShop_1", NewsWebName: "fashionunited.fr", NewsUrl: "https://fashionunited.fr/actualite/business/mode-et-handicap-l-institut-de-la-mode-inclusive-devoile-de-nouveaux-projets/2023101733356", NewsDate: "17 Octobre2023", isFavorite: Favorite(isFavorite: true))
+            News(newsTitle: "Mode inclusive : en finir avec le mythe de l'offre et la demande", newsImage: "CardShop_1", newsWebName: "assiakara.com", newsUrl: "https://assiakara.com/fr-fr/blogs/le-blog-dassia/mode-inclusive-en-finir-avec-le-mythe-de-l-offre-et-la-demande", newsDate: "16 Août 2023", isFavorite: Favorite(isFavorite: true)),
+            News(newsTitle: "LA MODE INCLUSIVE : PRINCIPES ET DÉFIS", newsImage: "CardShop_1", newsWebName: "modames.com", newsUrl: "https://www.modames.com/blog-mode-ethique/mode-inclusive", newsDate: "13 Mai 2024", isFavorite: Favorite(isFavorite: false)),
+            News(newsTitle: "17 marques inclusives à connaître", newsImage: "CardShop_1", newsWebName: "vogue.fr", newsUrl: "https://www.vogue.fr/article/guide-marques-inclusives", newsDate: "21 Avril 2023", isFavorite: Favorite(isFavorite: true)),
+            News(newsTitle: "Mode et handicap : l'Institut de la Mode Inclusive dévoile de nouveaux projets", newsImage: "CardShop_1", newsWebName: "fashionunited.fr", newsUrl: "https://fashionunited.fr/actualite/business/mode-et-handicap-l-institut-de-la-mode-inclusive-devoile-de-nouveaux-projets/2023101733356", newsDate: "17 Octobre2023", isFavorite: Favorite(isFavorite: true))
         ]
     }
 }
