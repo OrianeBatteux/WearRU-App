@@ -18,7 +18,7 @@ struct ExplorerShopModalView: View {
     var selectedShop : Shop
     /// Si le magasin est ouvert.
     let opening = false
-    /// Si le magasin est visible sur la map.   
+    /// Si le magasin est visible sur la map.
     @Binding var isVisible : Bool
     /// Hauteur de l'affichage de la modale.
     var height : Double
