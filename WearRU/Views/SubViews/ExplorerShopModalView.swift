@@ -7,13 +7,23 @@
 
 import SwiftUI
 import MapKit
+/**
+ Documentation de la structure ExplorerShopModalView
+ 
+ Cette structure représente une modal qui adopte le protocole view.
+ 
+ */
 struct ExplorerShopModalView: View {
+    /// Si le magasin est sélectionner.
     var selectedShop : Shop
+    /// Si le magasin est ouvert.
     let opening = false
+    /// Si le magasin est visible sur la map.   
     @Binding var isVisible : Bool
+    /// Hauteur de l'affichage de la modale.
     var height : Double
     var body: some View {
-        ZStack{
+        ZStack {
             Color(.colorBackgroundLight)
                 .ignoresSafeArea()
             VStack(alignment: .center) {
@@ -43,11 +53,10 @@ struct ExplorerShopModalView: View {
                             ButtonShare()
                         }
                     }
-                    HStack{
+                    HStack {
                         Text(selectedShop.shopName)
                             .font(.system(size: 28)).bold()
                         Spacer()
-                        // Si le magasin est ouvert sur la modal ça affiche le texte ouvert et le petit bouton en vert et sinon ça marque fermé et le bouton est mis en rouge.
                         if opening == true {
                             Text("Ouvert")
                                 .foregroundStyle(.colorText).bold()
@@ -63,7 +72,7 @@ struct ExplorerShopModalView: View {
                             
                         }
                     }
-                    ScrollView(.horizontal){
+                    ScrollView(.horizontal) {
                         HStack{
                             Image(selectedShop.shopImage[0])
                                 .resizable()
@@ -75,7 +84,7 @@ struct ExplorerShopModalView: View {
                                 .cornerRadius(15)
                         }
                     }
-                    VStack(alignment: .leading){
+                    VStack(alignment: .leading) {
                         HStack {
                             Image(systemName: "mappin.circle.fill")
                                 .foregroundStyle(.colorPrimary)
@@ -110,12 +119,17 @@ struct ExplorerShopModalView: View {
             .padding()
             .foregroundStyle(Color("Color-Text"))
         }
-        .presentationDetents([.fraction(0.65)])
+        .presentationDetents([.fraction(height)])
     }
 }
-
-
-struct ElementExView: View{
+/**
+ Documentation de la structure ElementExView.
+ 
+ Cette structure représente une modale qui adopte le protocole view et représente les filtres que le magasin as sélectionné dans ExplorerShopModalView.
+ 
+ */
+struct ElementExView: View {
+    /// Texte pour les filtres.
     var myText: String
     var body: some View{
         ZStack {
@@ -128,6 +142,5 @@ struct ElementExView: View{
     }
 }
 #Preview {
-    ExplorerShopModalView(selectedShop: Shop(shopName: "Erica Zhou", shopImage: ["CardShop_1", "CardShop_1"], shopOpening: true, shopHours: WeekHours(monday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), tuesday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), wednesday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), thursday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), friday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), saturday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), sunday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00")), shopPhone: "01 23 45 67 89", isFavorite: Favorite(isFavorite: false), shopLocation: Location(coordinate : CLLocationCoordinate2D(latitude: 48.88105392456055, longitude: 2.4767637252807617), address: "Westfield Rosny 2")), isVisible: .constant(true), height : 0.4)
+    ExplorerShopModalView(selectedShop: Shop(shopName: "Erica Zhou", shopImage: ["CardShop_1", "CardShop_2"], shopOpening: true, shopHours: WeekHours(monday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), tuesday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), wednesday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), thursday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), friday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), saturday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00"), sunday: DayHours(morningOpening: "09:00", morningClosing: "13:00", afternoonOpening: "14:00", afternoonClosing: "19:00")), shopPhone: "01 23 45 67 89", isFavorite: Favorite(isFavorite: false), shopLocation: Location(coordinate : CLLocationCoordinate2D(latitude: 48.88105392456055, longitude: 2.4767637252807617), address: "Westfield Rosny 2")), isVisible: .constant(true), height : 0.4)
 }
-
