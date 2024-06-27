@@ -8,10 +8,17 @@
 import SwiftUI
 import MapKit
 
+/**
+Documentation de la structure ExplorerMapView.
+Cette structure affiche le mod d'affichage Map ou le mod d'affichage Liste en fonction de l'état d'une variable de type Bool. Elle est conforme au Protocol View.
+*/
+
 struct ExplorerMapView: View {
+    ///Array de tout nos Shop, initiailisé dans ShopViewModel
     @ObservedObject var shopViewModel = ShopViewModel()
+    ///Définit le mod d'affichage à choisir
     @State private var isOnMapMod : Bool = true
-    // Initialise une variable pour la position de départ de la map
+    ///Position de départ de la map
     let position = MapCameraPosition.region(
         MKCoordinateRegion (
             center: CLLocationCoordinate2D(latitude: 48.88105392456055, longitude: 2.4767637252807617),
@@ -20,10 +27,8 @@ struct ExplorerMapView: View {
     )
     
     var body: some View {
-        // Condition qui dit quel mod on veut voir, soit le mod Map
         if isOnMapMod {
             ZStack {
-                // Affichage de la map avec les Pins par dessus en bouclant sur une liste de boutique
                 Map(initialPosition: position) {
                     ForEach(shopViewModel.shops) { shop in
                         Annotation(shop.shopName, coordinate: shop.shopLocation.coordinate) {
@@ -44,7 +49,7 @@ struct ExplorerMapView: View {
                 }
                 .padding()
             }
-        } else { // Soit le mode liste
+        } else {
             ZStack {
                 ExplorerListView()
                 VStack {

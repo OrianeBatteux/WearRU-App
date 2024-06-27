@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+/**
+Documentation de la structure ResearchBarExView.
+Cette structure affiche une barre de recherche. Elle est conforme au Protocol View.
+*/
+
 struct ResearchBarExView: View {
     @State private var researchText : String = ""
     
