@@ -9,7 +9,12 @@ import SwiftUI
 import MapKit
 
 struct ShopCardView: View {
+    /**
+     Documentation de la structure ShopCardView.
+     Cette structure représente l'interface des fiches magasins.
+     */
     @ObservedObject var shop: Shop
+    ///Instance de Shop observable
     var body: some View {
         VStack(alignment: .leading, spacing: 10.0) {
             Image(shop.shopImage[0])
