@@ -12,7 +12,7 @@ struct ShopCardView: View {
     @ObservedObject var shop: Shop
     var body: some View {
         VStack(alignment: .leading, spacing: 10.0) {
-            Image(shop.shopImage)
+            Image(shop.shopImage[0])
                 .resizable()
                 .frame(width: 350, height: 350)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
@@ -53,7 +53,7 @@ struct ShopCardView: View {
                 Image(systemName: "clock.circle.fill")
                     .foregroundStyle(.colorPrimary)
                     .font(.title)
-                Text(shop.shopHours)
+                Text(shop.shopHours.hoursDisplay(of: "thursday"))
                     .font(.title3)
                     .lineLimit(nil)
                     .fixedSize(horizontal: false, vertical: true)
@@ -81,5 +81,5 @@ struct ShopCardView: View {
 }
 
 #Preview {
-    ShopCardView(shop: Shop(shopName: "Sample_Name", shopImage: "CardShop_1", shopOpening: true, shopHours: "Sample_Name", shopPhone: "Sample_Name", isFavorite: false, shopLocation: Location(coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0), address: "Sample_Name")))
+    ShopCardView(shop: Shop(shopName: "Sample_Name", shopImage: ["CardShop_1"], shopOpening: true, shopHours: WeekHours(monday: DayHours(morningOpening: "19:00", morningClosing: "19:00", afternoonOpening: "19:00", afternoonClosing: "19:00"), tuesday: DayHours(morningOpening: "19:00", morningClosing: "19:00", afternoonOpening: "19:00", afternoonClosing: "19"), wednesday: DayHours(morningOpening: "19:00", morningClosing: "19:00", afternoonOpening: "19:00", afternoonClosing: "19:00"), thursday: DayHours(morningOpening: "19:00", morningClosing: "19:00", afternoonOpening: "19:00", afternoonClosing: "19:00"), friday: DayHours(morningOpening: "19:00", morningClosing: "19:00", afternoonOpening: "19:00", afternoonClosing: "19:00"), saturday: DayHours(morningOpening: "19:00", morningClosing: "19:00", afternoonOpening: "19", afternoonClosing: "19"), sunday: DayHours(morningOpening: "19:00", morningClosing: "19:00", afternoonOpening: "19:00", afternoonClosing: "19:00")), shopPhone: "Sample_Name", isFavorite: Favorite(isFavorite: false), shopLocation: Location(coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0), address: "Sample_Name")))
 }

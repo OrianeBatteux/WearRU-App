@@ -33,6 +33,9 @@
 		E22EB3FB2C2D4ABE002C4039 /* ButtonFilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22EB3FA2C2D4ABE002C4039 /* ButtonFilterModel.swift */; };
 		E22EB3FD2C2D4D8E002C4039 /* NewsTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22EB3FC2C2D4D8E002C4039 /* NewsTagView.swift */; };
 		E22EB3FF2C2D4DD1002C4039 /* FavoriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22EB3FE2C2D4DD1002C4039 /* FavoriteModel.swift */; };
+		E22EB4012C2D5C1D002C4039 /* WeekHoursModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22EB4002C2D5C1D002C4039 /* WeekHoursModel.swift */; };
+		E22EB4032C2D5CF6002C4039 /* DayHoursModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22EB4022C2D5CF6002C4039 /* DayHoursModel.swift */; };
+		E22EB4052C2D5D31002C4039 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22EB4042C2D5D31002C4039 /* LocationModel.swift */; };
 		E23C8CE72C0EFA7C00AEA272 /* PinShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23C8CE62C0EFA7C00AEA272 /* PinShape.swift */; };
 		E23C8CE92C0F12C300AEA272 /* PinExView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23C8CE82C0F12C300AEA272 /* PinExView.swift */; };
 		E23C8CEB2C0F5AA100AEA272 /* FilterListExView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23C8CEA2C0F5AA100AEA272 /* FilterListExView.swift */; };
@@ -79,6 +82,9 @@
 		E22EB3FA2C2D4ABE002C4039 /* ButtonFilterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFilterModel.swift; sourceTree = "<group>"; };
 		E22EB3FC2C2D4D8E002C4039 /* NewsTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTagView.swift; sourceTree = "<group>"; };
 		E22EB3FE2C2D4DD1002C4039 /* FavoriteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteModel.swift; sourceTree = "<group>"; };
+		E22EB4002C2D5C1D002C4039 /* WeekHoursModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekHoursModel.swift; sourceTree = "<group>"; };
+		E22EB4022C2D5CF6002C4039 /* DayHoursModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayHoursModel.swift; sourceTree = "<group>"; };
+		E22EB4042C2D5D31002C4039 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		E23C8CE62C0EFA7C00AEA272 /* PinShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinShape.swift; sourceTree = "<group>"; };
 		E23C8CE82C0F12C300AEA272 /* PinExView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinExView.swift; sourceTree = "<group>"; };
 		E23C8CEA2C0F5AA100AEA272 /* FilterListExView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterListExView.swift; sourceTree = "<group>"; };
@@ -231,6 +237,9 @@
 				A57E37FE2C1309FF00B72A54 /* NewsModel.swift */,
 				E22EB3FA2C2D4ABE002C4039 /* ButtonFilterModel.swift */,
 				E22EB3FE2C2D4DD1002C4039 /* FavoriteModel.swift */,
+				E22EB4002C2D5C1D002C4039 /* WeekHoursModel.swift */,
+				E22EB4022C2D5CF6002C4039 /* DayHoursModel.swift */,
+				E22EB4042C2D5D31002C4039 /* LocationModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -339,6 +348,7 @@
 				E22EB3FD2C2D4D8E002C4039 /* NewsTagView.swift in Sources */,
 				709D6BF42C0DB49700F57235 /* ContentView.swift in Sources */,
 				704E68002C0DC1D900000B89 /* DatabaseService.swift in Sources */,
+				E22EB4032C2D5CF6002C4039 /* DayHoursModel.swift in Sources */,
 				707E3BB22C0DEDFD003E8724 /* File3.swift in Sources */,
 				A59315892C108E970064B3A8 /* ButtonFavorite.swift in Sources */,
 				704E680F2C0DC4C200000B89 /* Color+Extensions.swift in Sources */,
@@ -351,6 +361,7 @@
 				E23C8CEB2C0F5AA100AEA272 /* FilterListExView.swift in Sources */,
 				EA2003FE2C1099E4002BE87E /* ViewCoordinator.swift in Sources */,
 				A5048DBE2C0F962D00134931 /* ButtonFilter.swift in Sources */,
+				E22EB4012C2D5C1D002C4039 /* WeekHoursModel.swift in Sources */,
 				E23C8CE72C0EFA7C00AEA272 /* PinShape.swift in Sources */,
 				EAB0877D2C0DF14000A7C28C /* ExplorerSearchModalView.swift in Sources */,
 				E22EB3FB2C2D4ABE002C4039 /* ButtonFilterModel.swift in Sources */,
@@ -368,6 +379,7 @@
 				EAB0877B2C0DF12700A7C28C /* ExplorerFilterModalView.swift in Sources */,
 				E22EB3FF2C2D4DD1002C4039 /* FavoriteModel.swift in Sources */,
 				EAB087732C0DF08F00A7C28C /* NewsHomeView.swift in Sources */,
+				E22EB4052C2D5D31002C4039 /* LocationModel.swift in Sources */,
 				A5048DC82C0F966000134931 /* ShopViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

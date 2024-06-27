@@ -20,15 +20,15 @@ class Shop: Identifiable, ObservableObject {
     ///Nom du magasin
     var shopName: String
     ///Image du magasin
-    var shopImage: String
+    var shopImage: [String]
     ///Si le le magasin est ouvert ou fermé
     var shopOpening : Bool
     ///Les jours et horaires du magasin
-    var shopHours : String
+    var shopHours : WeekHours
     ///Numéro de téléphone du magasin
     var shopPhone : String
     ///Si le magasin est en marqué en favoris ou non
-    @Published var isFavorite: Bool
+    @Published var isFavorite: Favorite
     ///Localisation du magasin
     var shopLocation: Location
     ///Si le magasin est sélectionné
@@ -48,7 +48,7 @@ class Shop: Identifiable, ObservableObject {
      - isSelected: Le magasin sélectionné
      */
     
-    init(shopName: String, shopImage: String, shopOpening: Bool, shopHours: String, shopPhone: String, isFavorite: Bool, shopLocation: Location, isSelected: Bool = false) {
+    init(shopName: String, shopImage: [String], shopOpening: Bool, shopHours: WeekHours, shopPhone: String, isFavorite: Favorite, shopLocation: Location, isSelected: Bool = false) {
         self.shopName = shopName
         self.shopImage = shopImage
         self.shopOpening = shopOpening
@@ -59,31 +59,3 @@ class Shop: Identifiable, ObservableObject {
         self.isSelected = isSelected
     }
 }
-
-/**
- Documentation de la structure Location.
- Cette structure représente un lieu. Elle est identifiable.
- */
-
-struct Location: Identifiable {
-    ///
-    let id : UUID = UUID()
-    /// Coordonnées du lieu
-    let coordinate : CLLocationCoordinate2D
-    /// Adresse du lieu
-    var address: String
-    
-    /**
-     Initialise une instance de 'Location' avec des valeurs spécifiques.
-     
-     - Parameters:
-     - coordinate: Les coordonnées du lieu
-     - address: L'adresse du lieu
-     */
-    
-    init(coordinate: CLLocationCoordinate2D, address: String) {
-        self.coordinate = coordinate
-        self.address = address
-    }
-}
-

@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct FilterListExView: View {
+    
     @StateObject var filterViewModel : FilterViewModel = FilterViewModel()
     let titleText : String
-    let filtersList : [FilterModel]
+    let filtersList : [Filter]
     let columns = [
         GridItem(.adaptive(minimum: 100))
     ]
-    //    var categoryName : String
-    //    var buttonsText : [String]
     
     var body: some View {
         VStack{
@@ -26,18 +25,13 @@ struct FilterListExView: View {
             }
             LazyVGrid(columns: columns, spacing: 10) {
                 ForEach(filtersList) { filter in
-                    buttonFilter(buttonText: filter.name)
+                    ButtonFilter(buttonText: filter.buttonText)
                 }
             }
         }
-//        .padding()
     }
-    
 }
 
 #Preview {
-    FilterListExView(titleText: "Liste d'inclusivité", filtersList: [FilterModel(id: 0, name: "Eco"),
-                     FilterModel(id: 1, name: "Non Genré"),
-                     FilterModel(id: 2, name: "Taille Large"),
-                     FilterModel(id: 3, name: "Handicap")])
+    FilterListExView(titleText: "Liste d'inclusivité", filtersList: [Filter(buttonText: "Eco"), Filter(buttonText: "Eco"), Filter(buttonText: "Eco"), Filter(buttonText: "Eco")])
 }

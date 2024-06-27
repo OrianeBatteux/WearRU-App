@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct buttonFilter: View {
+struct ButtonFilter: View {
     @State var isFilterTapped = false
     let buttonText : String
     
@@ -27,5 +27,5 @@ struct buttonFilter: View {
 }
 
 #Preview {
-    buttonFilter(buttonText: "Test")
+    ButtonFilter(buttonText: "Test")
 }
