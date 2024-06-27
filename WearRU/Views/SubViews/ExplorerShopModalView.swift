@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct ExplorerShopModalView: View {
+    var selectedShop : Shop
     let opening = false
     @Binding var isVisible : Bool
     var height : Double
@@ -43,7 +45,7 @@ struct ExplorerShopModalView: View {
                         }
                     }
                     HStack{
-                        Text("Erica Zhou")
+                        Text(selectedShop.shopName)
                             .font(.system(size: 28)).bold()
                         Spacer()
                         // Si le magasin est ouvert sur la modal ça affiche le texte ouvert et le petit bouton en vert et sinon ça marque fermé et le bouton est mis en rouge.
@@ -64,11 +66,11 @@ struct ExplorerShopModalView: View {
                     }
                     ScrollView(.horizontal){
                         HStack{
-                            Image("CardShop_1")
+                            Image(selectedShop.shopImage[0])
                                 .resizable()
                                 .frame(width: 200, height: 150 )
                                 .cornerRadius(15)
-                            Image("CardShop_1_2")
+                            Image(selectedShop.shopImage[1])
                                 .resizable()
                                 .frame(width: 200, height: 150 )
                                 .cornerRadius(15)
@@ -79,21 +81,21 @@ struct ExplorerShopModalView: View {
                             Image(systemName: "mappin.circle.fill")
                                 .foregroundStyle(.colorPrimary)
                                 .font(.title)
-                            Text("Westfield Rosny 2")
+                            Text(selectedShop.shopLocation.address)
                                 .font(.title3)
                         }
                         HStack {
                             Image(systemName: "clock.circle.fill")
                                 .foregroundStyle(.colorPrimary)
                                 .font(.title)
-                            Text("Lun-Sam: 10:00 – 20:30 \nDim: 10:00 – 19:00")
+                            Text(selectedShop.shopHours)
                                 .font(.title3)
                         }
                         HStack {
                             Image(systemName: "phone.circle.fill")
                                 .foregroundStyle(.colorPrimary)
                                 .font(.title)
-                            Text("01 23 45 67 89")
+                            Text(selectedShop.shopPhone)
                                 .font(.title3)
                         }
                     }
@@ -127,6 +129,5 @@ struct ElementExView: View{
     }
 }
 #Preview {
-    ExplorerShopModalView(isVisible: .constant(true), height : 0.4)
-    //    ElementExView()
+    ExplorerShopModalView(selectedShop: Shop(shopName: "Erica Zhou", shopImage: ["CardShop_1", "CardShop_2"], shopOpening: true, shopHours: "Lun-Sam: 10:00 – 20:30 \nDim: 10:00 – 19:00", shopPhone: "01 23 45 67 89", isFavorite: false, shopLocation: Location(coordinate : CLLocationCoordinate2D(latitude: 48.88105392456055, longitude: 2.4767637252807617), address: "Westfield Rosny 2")), isVisible: .constant(true), height : 0.4)
 }

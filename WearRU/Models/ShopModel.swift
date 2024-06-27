@@ -20,7 +20,7 @@ class Shop: Identifiable, ObservableObject {
     ///Nom du magasin
     var shopName: String
     ///Image du magasin
-    var shopImage: String
+    var shopImage: [String]
     ///Si le le magasin est ouvert ou fermé
     var shopOpening : Bool
     ///Les jours et horaires du magasin
@@ -48,7 +48,7 @@ class Shop: Identifiable, ObservableObject {
      - isSelected: Le magasin sélectionné
      */
     
-    init(shopName: String, shopImage: String, shopOpening: Bool, shopHours: String, shopPhone: String, isFavorite: Bool, shopLocation: Location, isSelected: Bool = false) {
+    init(shopName: String, shopImage: [String], shopOpening: Bool, shopHours: String, shopPhone: String, isFavorite: Bool, shopLocation: Location, isSelected: Bool = false) {
         self.shopName = shopName
         self.shopImage = shopImage
         self.shopOpening = shopOpening

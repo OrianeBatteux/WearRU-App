@@ -12,7 +12,7 @@ struct ShopCardView: View {
     @ObservedObject var shop: Shop
     var body: some View {
         VStack(alignment: .leading, spacing: 10.0) {
-            Image(shop.shopImage)
+            Image(shop.shopImage[0])
                 .resizable()
                 .frame(width: 350, height: 350)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
@@ -81,5 +81,5 @@ struct ShopCardView: View {
 }
 
 #Preview {
-    ShopCardView(shop: Shop(shopName: "Sample_Name", shopImage: "CardShop_1", shopOpening: true, shopHours: "Sample_Name", shopPhone: "Sample_Name", isFavorite: false, shopLocation: Location(coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0), address: "Sample_Name")))
+    ShopCardView(shop: Shop(shopName: "Sample_Name", shopImage: ["CardShop_1"], shopOpening: true, shopHours: "Sample_Name", shopPhone: "Sample_Name", isFavorite: false, shopLocation: Location(coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0), address: "Sample_Name")))
 }

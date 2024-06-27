@@ -11,22 +11,22 @@ import Foundation
  Documentation de la classe Filter.
  
  Cette classe représente l'ensemble des filtres de la page FilterViewModel qui est dans le dossier ViewModels.
+ 
  */
 class Filter: Identifiable {
-    /// Identifiant de Filter.
+    /// Identifiant du filtre.
     var id: UUID = UUID()
-    /// Bouton de Filter.
+    /// Bouton du filtre.
     var buttonText: String
-    /// Si le bouton est séléctioner.
+    /// Si l'un des boutons est séléctioner.
     var isFilterTapped: Bool = false
 
     /**
-     Initialise une instance de Filter avec une valeur specifique.
+     Initialise une instance de `Filter` avec une valeur specifique.
 
-Parameters:
-buttonText: Le texte du bouton
+     - Parameters:
+        - buttonText: Le texte des boutons
 */
-
     init(buttonText: String) {
         self.buttonText = buttonText
     }

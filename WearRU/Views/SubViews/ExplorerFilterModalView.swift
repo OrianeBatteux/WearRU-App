@@ -33,7 +33,7 @@ struct ExplorerFilterModalView: View {
                             .foregroundColor(.accentColor)
                     })
                 }
-//                FilterListExView(titleText: "Liste d'inclusivité", filtersList: filterViewModel.filterInclusive)
+                FilterListExView(titleText: "Liste d'inclusivité", filtersList: filterViewModel.filterInclusive)
 //                FilterListExView(titleText: "Type", filtersList: filterViewModel.filterType)
 //                FilterListExView(titleText: "Genre", filtersList: filterViewModel.filterGender)
 //                FilterListExView(titleText: "Distance", filtersList: filterViewModel.filterDistance)
