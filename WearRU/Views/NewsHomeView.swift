@@ -15,7 +15,7 @@ import SwiftUI
 
 struct NewsHomeView: View {
     var body: some View {
-
+        @StateObject var newsViewModel = NewsViewModel()
         ZStack{
             Color(.colorBackgroundLight)
                 .ignoresSafeArea()
@@ -37,12 +37,17 @@ struct NewsHomeView: View {
                 }
                 ResearchBarExView()
                 HStack(alignment: .center, spacing: 30){
+                        
                     Text ("Récent")
                     Text ("Alphabétique")
                     Text ("Favoris")
                 }
-                ScrollView(.vertical) {
-
+                ScrollView() {
+                    VStack(spacing : 20) {
+                        ForEach (newsViewModel.news) {news in
+                            NewsTagView(newsTitle: news.newsTitle, newsImage: news.newsImage, newsWebName: news.newsWebName, newsDate: news.newsDate, isFavorite: news.isFavorite)
+                        }
+                    }
                 }
             }
             .padding()

@@ -29,14 +29,13 @@ struct NewsTagView: View {
             RoundedRectangle(cornerRadius: 30)
                 .fill(Color.white)
                 .frame(width: 350, height: 160)
-                .shadow(radius: 5)
             HStack{
                 Image(newsImage)
                     .resizable()
                     .frame(width: 100, height: 100)
                     .cornerRadius(25)
 
-                VStack{
+                VStack(alignment: .leading, spacing: 5){
                     Text(newsWebName)
                             .foregroundColor(Color("Color-Text"))
                         .bold()
