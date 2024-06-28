@@ -14,8 +14,8 @@ import SwiftUI
  */
 
 struct NewsHomeView: View {
+    @StateObject var newsViewModel = NewsViewModel()
     var body: some View {
-        @StateObject var newsViewModel = NewsViewModel()
         ZStack{
             Color(.colorBackgroundLight)
                 .ignoresSafeArea()

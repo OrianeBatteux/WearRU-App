@@ -74,52 +74,50 @@ struct ExplorerShopModalView: View {
                     }
                     ScrollView(.horizontal) {
                         HStack{
-                            Image(selectedShop.shopImage[0])
-                                .resizable()
-                                .frame(width: 200, height: 150 )
-                                .cornerRadius(15)
-                            Image(selectedShop.shopImage[1])
-                                .resizable()
-                                .frame(width: 200, height: 150 )
-                                .cornerRadius(15)
+                            ForEach(selectedShop.shopImage, id : \.self) { image in
+                                Image(image)
+                                    .resizable()
+                                    .frame(width: 200, height: 150 )
+                                    .cornerRadius(15)
+                            }
                         }
-                    }
-                    VStack(alignment: .leading) {
+                        VStack(alignment: .leading) {
+                            HStack {
+                                Image(systemName: "mappin.circle.fill")
+                                    .foregroundStyle(.colorPrimary)
+                                    .font(.title)
+                                Text(selectedShop.shopLocation.address)
+                                    .font(.title3)
+                            }
+                            HStack {
+                                Image(systemName: "clock.circle.fill")
+                                    .foregroundStyle(.colorPrimary)
+                                    .font(.title)
+                                Text(selectedShop.shopHours.hoursDisplay(of: "friday"))
+                                    .font(.title3)
+                            }
+                            HStack {
+                                Image(systemName: "phone.circle.fill")
+                                    .foregroundStyle(.colorPrimary)
+                                    .font(.title)
+                                Text(selectedShop.shopPhone)
+                                    .font(.title3)
+                            }
+                        }
                         HStack {
-                            Image(systemName: "mappin.circle.fill")
-                                .foregroundStyle(.colorPrimary)
-                                .font(.title)
-                            Text(selectedShop.shopLocation.address)
-                                .font(.title3)
+                            ElementExView(myText: "Eco")
+                            ElementExView(myText:"Non Genré")
+                            ElementExView(myText: "Taille Large")
                         }
-                        HStack {
-                            Image(systemName: "clock.circle.fill")
-                                .foregroundStyle(.colorPrimary)
-                                .font(.title)
-                            Text(selectedShop.shopHours.hoursDisplay(of: "friday"))
-                                .font(.title3)
-                        }
-                        HStack {
-                            Image(systemName: "phone.circle.fill")
-                                .foregroundStyle(.colorPrimary)
-                                .font(.title)
-                            Text(selectedShop.shopPhone)
-                                .font(.title3)
-                        }
-                    }
-                    HStack {
-                        ElementExView(myText: "Eco")
-                        ElementExView(myText:"Non Genré")
-                        ElementExView(myText: "Taille Large")
                     }
                 }
+                .lineLimit(nil)
+                .fixedSize(horizontal: false, vertical: true)
+                .padding()
+                .foregroundStyle(Color("Color-Text"))
             }
-            .lineLimit(nil)
-            .fixedSize(horizontal: false, vertical: true)
-            .padding()
-            .foregroundStyle(Color("Color-Text"))
+            .presentationDetents([.fraction(height)])
         }
-        .presentationDetents([.fraction(height)])
     }
 }
 /**
