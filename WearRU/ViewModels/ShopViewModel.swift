@@ -15,19 +15,19 @@ import MapKit
 
 class ShopViewModel: ObservableObject {
     @Published var shops: [Shop] = []
-    ///Instance de la class Shop en tableau
+    ///shops est un tableau de Shop, initialisé comme un tableau vide
     
     /**
      Initialise une instance de 'Shop' sous forme de tableau avec des valeurs spécifiques.
      
      - Parameters:
      - shopName: Le nom du magasin
-     - shopImage: L'image du magasin
-     - shopOpening: Magasin Ouvert ou Fermé
-     - shopHours: Jours et horaires d'ouverture
+     - shopImage: Un tableau contenant les noms des images associées au magasin
+     - shopOpening: Un booléen indiquant si le magasin est ouvert
+     - shopHours: Un objet WeekHours représentant les heures d’ouverture pour chaque jour de la semaine
      - shopPhone: Le numéro de téléphone du magasin
-     - isFavorite: Le magasin en favoris
-     - shopLocation: La localisation du magasin
+     - isFavorite: Un objet Favorite indiquant si le magasin est marqué comme favori
+     - shopLocation: Un objet Location contenant la localisation géographique du magasin et son adresse
      - isSelected: Le magasin sélectionné
      */
     
@@ -83,8 +83,11 @@ class ShopViewModel: ObservableObject {
     }
     
     func resetShopViewModel () {
+        ///Une méthode de ShopViewModel qui réinitialise l’état de sélection (isSelected) de chaque magasin dans la liste shops.
         for shop in shops {
+            /// Itère à travers chaque magasin (shop) dans la liste shops.
             shop.isSelected = false
+            /// Définit la propriété isSelected de chaque magasin à false, désélectionnant ainsi tous les magasins.
         }
     }
 }
