@@ -10,25 +10,35 @@ import MapKit
 
 /**
  Documentation de la classe ShopViewModel.
- Cette classe représente une liste de magasins avec des initialisateurs spécifiques. Elle peut-être observé.
+ 
+ Cette classe représente une liste de magasins avec des initialisateurs spécifiques.
+ Elle peut-être observée pour suivre les changements d'état des magasins.
+ 
+ Utilisez cette classe pour gérer et interagir avec une liste de magasins dans votre application.
  */
 
 class ShopViewModel: ObservableObject {
+    /// Tableau de magasins.
+    ///
+    /// Ce tableau contient des instances de `Shop` et est initialisé comme un tableau vide
+    /// par défaut.
+    ///
+    /// Utilisez ce tableau pour stocker et gérer une liste de magasins dans votre application.
     @Published var shops: [Shop] = []
-    ///shops est un tableau de Shop, initialisé comme un tableau vide
+    
     
     /**
-     Initialise une instance de 'Shop' sous forme de tableau avec des valeurs spécifiques.
+     Initialise une instance de `Shop` avec des valeurs spécifiques.
      
      - Parameters:
-     - shopName: Le nom du magasin
-     - shopImage: Un tableau contenant les noms des images associées au magasin
-     - shopOpening: Un booléen indiquant si le magasin est ouvert
-     - shopHours: Un objet WeekHours représentant les heures d’ouverture pour chaque jour de la semaine
-     - shopPhone: Le numéro de téléphone du magasin
-     - isFavorite: Un objet Favorite indiquant si le magasin est marqué comme favori
-     - shopLocation: Un objet Location contenant la localisation géographique du magasin et son adresse
-     - isSelected: Le magasin sélectionné
+       - shopName: Le nom du magasin.
+       - shopImage: Un tableau contenant les noms des images associées au magasin.
+       - shopOpening: Un booléen indiquant si le magasin est ouvert.
+       - shopHours: Un objet `WeekHours` représentant les heures d’ouverture pour chaque jour de la semaine.
+       - shopPhone: Le numéro de téléphone du magasin.
+       - isFavorite: Un objet `Favorite` indiquant si le magasin est marqué comme favori.
+       - shopLocation: Un objet `Location` contenant la localisation géographique du magasin et son adresse.
+       - isSelected: Indique si le magasin est sélectionné.
      */
     
     init() {
@@ -46,48 +56,51 @@ class ShopViewModel: ObservableObject {
         ]
     }
     
-    
+    /// Stocke le texte de recherche saisi par l’utilisateur.
+    ///
+    /// Par défaut, le texte de recherche est vide jusqu’à ce que l’utilisateur
+    /// saisisse quelque chose.
+    ///
+    /// Utilisez cette propriété pour suivre et réagir aux changements du texte
+    /// de recherche dans l'interface utilisateur.
     @Published var searchText: String = ""
-    ///Stocke le texte de recherche saisi par l’utilisateur. Par défaut, le texte de recherche est vide jusqu’à ce que l’utilisateur saisisse quelque chose.
     
+    /// Retourne un tableau de `Shop` filtré.
+    ///
+    /// Cette propriété calculée vérifie si `searchText` est vide.
+    /// - Si `searchText` est vide, elle retourne la liste complète des magasins.
+    /// - Sinon, elle filtre la liste des magasins pour inclure seulement ceux
+    ///   dont le nom (`shopName`) contient `searchText`, en ignorant la casse.
     var filteredShops: [Shop] {
-        /**
-         Une propriété calculée qui retourne un tableau de Shop filtré.
-         */
         guard !searchText.isEmpty else { return shops}
-        /**
-         Vérifie si searchText est vide.
-         - Si searchText est vide, retourne la liste complète des magasins (shops).
-         */
         return shops.filter { shop in
             shop.shopName.lowercased().contains(searchText.lowercased())
-            /**
-             Filtre la liste des magasins (shops).
-             - Pour chaque shop dans shops, vérifie si shop.shopName contient searchText, en ignorant la casse (en utilisant lowercased()).
-             */
-            
         }
     }
     
+    /// Retourne un tableau de `Shop` filtré et trié.
+    ///
+    /// Cette propriété calculée vérifie d'abord si `searchText` est vide.
+    /// - Si `searchText` est vide, elle retourne un tableau vide.
+    /// - Sinon, elle trie la liste des magasins (`shops`) par ordre alphabétique
+    /// croissant de leur nom (`shopName`), en ignorant la casse, puis filtre
+    /// la liste triée pour inclure seulement ceux dont le nom contient `searchText`,
+    /// en ignorant la casse.
     var filteredSuggestions: [Shop] {
-        ///Une propriété calculée qui retourne un tableau de Shop filtré et trié.
         guard !searchText.isEmpty else { return [] }
-        /**
-         Vérifie si searchText est vide.
-         - Si searchText est vide, retourne un tableau vide.
-         */
         return shops.sorted { $0.shopName.lowercased() < $1.shopName.lowercased() }
-        ///Trie la liste des magasins (shops) par ordre alphabétique croissant de leur nom (shopName), en ignorant la casse.
             .filter { $0.shopName.lowercased().contains(searchText.lowercased()) }
-        ///Filtre la liste des magasins triés pour inclure seulement ceux dont le nom (shopName) contient searchText, en ignorant la casse.
     }
     
+    /// Réinitialise l’état de sélection de chaque magasin.
+    ///
+    /// Cette méthode parcourt tous les magasins dans la liste `shops` et définit
+    /// la propriété `isSelected` de chaque magasin à `false`, désélectionnant ainsi
+    /// tous les magasins.
     func resetShopViewModel () {
-        ///Une méthode de ShopViewModel qui réinitialise l’état de sélection (isSelected) de chaque magasin dans la liste shops.
         for shop in shops {
-            /// Itère à travers chaque magasin (shop) dans la liste shops.
             shop.isSelected = false
-            /// Définit la propriété isSelected de chaque magasin à false, désélectionnant ainsi tous les magasins.
+            
         }
     }
 }

@@ -15,7 +15,6 @@ import SwiftUI
  */
 
 class Shop: Identifiable, ObservableObject {
-    ///
     let id : UUID = UUID()
     ///Nom du magasin
     var shopName: String
@@ -37,7 +36,7 @@ class Shop: Identifiable, ObservableObject {
     /**
      Initialise une instance de 'Shop' avec des valeurs spécifiques.
      
-     - Parameters:
+     Parameters:
      - shopName: Le nom du magasin
      - shopImage: L'image du magasin
      - shopOpening: Magasin Ouvert ou Fermé
