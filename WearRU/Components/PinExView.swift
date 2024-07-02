@@ -72,7 +72,7 @@ struct PinExView: View {
             .offset(y: pinSize * 0.3)
         })
         .sheet(isPresented: $isVisible) {
-        } content: { ExplorerShopModalView(selectedShop: shopForPin, isVisible: $isVisible, height: 0.95)
+        } content: { ExplorerShopModalView(selectedShop: shopForPin, isVisible: $isVisible, height: 0.65)
         }
         .animation(.spring, value: pinSize)
         .frame(width: pinSize * 1.3, height: pinSize * 2.8)
